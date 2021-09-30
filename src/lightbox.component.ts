@@ -13,7 +13,7 @@ import {
 } from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 
-import {IAlbum, IEvent, LIGHTBOX_EVENT, LightboxEvent, LightboxWindowRef,} from './lightbox-event.service';
+import {IAlbum, IEvent, LIGHTBOX_EVENT, LightboxEvent, LightboxWindowRef} from './lightbox-event.service';
 
 @Pipe({ name: 'safe' })
 export class SafePipe implements PipeTransform {
@@ -702,4 +702,3 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
     return false;
   }
 }
-

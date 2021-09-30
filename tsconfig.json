@@ -1,4 +1,10 @@
 {
+  "angularCompilerOptions": {
+    "compilationMode": "partial",
+    "fullTemplateTypeCheck": true,
+    "strictTemplates": true,
+    "strictInjectionParameters": true
+  },
   "compileOnSave": false,
   "compilerOptions": {
     "module": "esnext",
@@ -8,7 +14,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noUnusedLocals": true,
-    "target": "es5",
+    "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
     ],
