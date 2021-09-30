@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "module": "esnext",
     "outDir": "./compiled",
     "sourceMap": true,
     "declaration": true,
@@ -17,6 +18,10 @@
       "dom"
     ]
   },
+  "files": [
+    "demo/main.ts",
+    "demo/polyfills.ts"
+  ],
   "include": [
     "demo/**/*"
   ]
