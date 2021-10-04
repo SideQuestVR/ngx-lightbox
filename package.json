@@ -48,9 +48,11 @@
     "watch:scss": "watch \"yarn bundle-styles\" \"projects/\"",
     "bundle-styles": "delay 5 && scss-bundle -c scss-bundle.config.json",
     "watch:demo": "wait-on dist/ngx-lightbox/fesm5 && delay 10 && ng serve ngx-lightbox-demo --poll 2000 --host 0.0.0.0",
-    "build": "ng build ngx-lightbox",
-    "prepare": "husky install"
+    "build": "ng build ngx-lightbox"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/piotrmocek/ngx-lightbox.git"
