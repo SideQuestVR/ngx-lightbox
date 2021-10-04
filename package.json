@@ -1,6 +1,6 @@
 {
   "name": "@viscoci/ngx-lightbox",
-  "version": "3.0.0",
+  "version": "9.0.0",
   "description": "A port >= angular 9 for lightbox2",
   "main": "index.js",
   "dependencies": {
@@ -49,7 +49,6 @@
     "bundle-styles": "delay 5 && scss-bundle -c scss-bundle.config.json",
     "watch:demo": "wait-on dist/ngx-lightbox/fesm5 && delay 10 && ng serve ngx-lightbox-demo --poll 2000 --host 0.0.0.0",
     "build": "ng build ngx-lightbox",
-    "postinstall": "husky install",
     "prepare": "husky install"
   },
   "repository": {
