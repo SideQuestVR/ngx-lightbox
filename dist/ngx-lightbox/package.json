@@ -6,6 +6,11 @@
     "@angular/core": "^9.1.13",
     "tslib": "^1.10.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viscoci/ngx-lightbox.git",
+    "directory": "dist/ngx-lightbox"
+  },
   "main": "bundles/viscoci-ngx-lightbox.umd.js",
   "module": "fesm5/viscoci-ngx-lightbox.js",
   "es2015": "fesm2015/viscoci-ngx-lightbox.js",

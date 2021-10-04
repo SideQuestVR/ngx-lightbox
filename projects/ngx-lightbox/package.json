@@ -4,5 +4,10 @@
     "peerDependencies": {
         "@angular/common": "^9.1.13",
         "@angular/core": "^9.1.13"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/viscoci/ngx-lightbox.git",
+        "directory": "dist/ngx-lightbox"
     }
 }
