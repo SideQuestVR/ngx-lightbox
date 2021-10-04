@@ -13,7 +13,7 @@ yarn add 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v9'
 or
 
 ```
-npm install 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v9
+npm install 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v9'
 ```
 
 Update your `angular.json`
