@@ -74,7 +74,7 @@
               "projects/ngx-lightbox-demo/src/assets"
             ],
             "styles": [
-              "projects/ngx-lightbox/src/styles/lightbox.scss"
+              "projects/ngx-lightbox/lightbox.scss"
             ],
             "scripts": []
           },
