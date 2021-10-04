@@ -49,13 +49,10 @@
     "watch:demo": "wait-on dist/ngx-lightbox/fesm5 && delay 10 && ng serve ngx-lightbox-demo --poll 2000 --host 0.0.0.0",
     "build": "ng build ngx-lightbox"
   },
-  "files": [
-    "dist",
-    "index.d.ts"
-  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/piotrmocek/ngx-lightbox.git"
+    "url": "git+https://github.com/viscoci/ngx-lightbox.git",
+    "directory": "dist/ngx-lightbox"
   },
   "keywords": [
     "lightbox2",
