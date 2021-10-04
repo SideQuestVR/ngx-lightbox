@@ -2,7 +2,6 @@
   "name": "@viscoci/ngx-lightbox",
   "version": "9.0.0",
   "description": "A port >= angular 9 for lightbox2",
-  "main": "index.js",
   "dependencies": {
     "@angular-devkit/build-ng-packagr": "^0.1002.0",
     "tslib": "^1.10.0"
@@ -51,7 +50,8 @@
     "build": "ng build ngx-lightbox"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "repository": {
     "type": "git",
