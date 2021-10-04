@@ -12,7 +12,9 @@ import { LightboxEvent, LIGHTBOX_EVENT, IAlbum } from './lightbox-event.service'
 import { LightboxOverlayComponent } from './lightbox-overlay.component';
 import { DOCUMENT } from '@angular/common';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class Lightbox {
   constructor(
     private _componentFactoryResolver: ComponentFactoryResolver,

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { LightboxModule } from '../src';
+import { LightboxModule } from 'ngx-lightbox';
 import { AppComponent } from './app.component';
 
 @NgModule({

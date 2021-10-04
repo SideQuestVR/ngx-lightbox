@@ -3,6 +3,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   Inject,
   Input,
   OnDestroy,
@@ -24,58 +25,11 @@ export class SafePipe implements PipeTransform {
 }
 
 @Component({
-  template: `
-    <div class="lb-outerContainer transition" #outerContainer id="outerContainer">
-      <div class="lb-container" #container id="container">
-        <img class="lb-image"
-             id="image"
-             [src]="album[currentImageIndex].src"
-             class="lb-image animation fadeIn"
-             [hidden]="ui.showReloader"
-             #image *ngIf="!album[currentImageIndex].iframe && !needsIframe(album[currentImageIndex].src)">
-        <iframe class="lb-image"
-             id="iframe"
-             [src]="album[currentImageIndex].src | safe"
-             class="lb-image lb-iframe animation fadeIn"
-             [hidden]="ui.showReloader"
-             #iframe *ngIf="album[currentImageIndex].iframe || needsIframe(album[currentImageIndex].src)">
-        </iframe>
-        <div class="lb-nav" [hidden]="!ui.showArrowNav" #navArrow>
-          <a class="lb-prev" [hidden]="!ui.showLeftArrow" (click)="prevImage()" #leftArrow></a>
-          <a class="lb-next" [hidden]="!ui.showRightArrow" (click)="nextImage()" #rightArrow></a>
-        </div>
-        <div class="lb-loader" [hidden]="!ui.showReloader" (click)="close($event)">
-          <a class="lb-cancel"></a>
-        </div>
-      </div>
-    </div>
-    <div class="lb-dataContainer" [hidden]="ui.showReloader" #dataContainer>
-      <div class="lb-data">
-        <div class="lb-details">
-          <span class="lb-caption animation fadeIn" [hidden]="!ui.showCaption" [innerHtml]="album[currentImageIndex].caption" #caption>
-          </span>
-          <span class="lb-number animation fadeIn" [hidden]="!ui.showPageNumber" #number>{{ content.pageNumber }}</span>
-        </div>
-        <div class="lb-controlContainer">
-          <div class="lb-closeContainer">
-            <a class="lb-close" (click)="close($event)"></a>
-          </div>
-          <div class="lb-turnContainer" [hidden]="!ui.showRotateButton">
-            <a class="lb-turnLeft" (click)="control($event)"></a>
-            <a class="lb-turnRight" (click)="control($event)"></a>
-          </div>
-          <div class="lb-zoomContainer" [hidden]="!ui.showZoomButton">
-            <a class="lb-zoomOut" (click)="control($event)"></a>
-            <a class="lb-zoomIn" (click)="control($event)"></a>
-          </div>
-        </div>
-      </div>
-    </div>`,
   selector: '[lb-content]',
   host: {
-    '(click)': 'close($event)',
     '[class]': 'ui.classList'
-  }
+  },
+  templateUrl: "./lightbox.component.html",
 })
 export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnInit {
   @Input() album: Array<IAlbum>;
@@ -186,6 +140,7 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
     this._event.subscription.unsubscribe();
   }
 
+  @HostListener('close', ['$event'])
   public close($event: any): void {
     $event.stopPropagation();
     if ($event.target.classList.contains('lightbox') ||

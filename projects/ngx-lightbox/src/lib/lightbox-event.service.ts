@@ -25,7 +25,9 @@ export const LIGHTBOX_EVENT = {
   FILE_NOT_FOUND: 8
 };
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class LightboxEvent {
   private _lightboxEventSource: Subject<Object>;
   public lightboxEvent$: Observable<Object>;
@@ -43,7 +45,9 @@ function getWindow (): any {
   return window;
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class LightboxWindowRef {
   get nativeWindow (): any {
       return getWindow();

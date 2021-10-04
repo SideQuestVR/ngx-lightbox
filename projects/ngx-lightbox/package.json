@@ -1,0 +1,8 @@
+{
+    "name": "ngx-lightbox",
+    "version": "9.0.0",
+    "peerDependencies": {
+        "@angular/common": "^9.1.13",
+        "@angular/core": "^9.1.13"
+    }
+}

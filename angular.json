@@ -4,67 +4,137 @@
   "newProjectRoot": "projects",
   "projects": {
     "ngx-lightbox": {
-      "root": ".",
-      "sourceRoot": ".",
-      "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
+      "root": "projects/ngx-lightbox",
+      "sourceRoot": "projects/ngx-lightbox/src",
+      "projectType": "library",
+      "prefix": "ngx-lightbox",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "aot": true,
-            "outputPath": "dist",
-            "index": "index.html",
-            "main": "demo/main.ts",
-            "polyfills": "demo/polyfills.ts",
-            "tsConfig": "tsconfig-demo.json",
-            "styles": [
-              "./src/lightbox.css",
-              "demo/app.css"
-            ],
-            "assets": [
-              { "glob": "**/*", "input": "./demo/img/", "output": "./demo/img/" }
-            ],
-            "scripts": []
+            "tsConfig": "projects/ngx-lightbox/tsconfig.lib.json",
+            "project": "projects/ngx-lightbox/ng-package.json"
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": true,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "ngx-lightbox:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "ngx-lightbox:build:production"
+              "tsConfig": "projects/ngx-lightbox/tsconfig.lib.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/index.ts",
-            "tsConfig": "tsconfig.json",
-            "karmaConfig": "karma.conf.js",
+            "main": "projects/ngx-lightbox/src/test.ts",
+            "tsConfig": "projects/ngx-lightbox/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-lightbox/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-lightbox/tsconfig.lib.json",
+              "projects/ngx-lightbox/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-lightbox-demo": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ngx-lightbox-demo",
+      "sourceRoot": "projects/ngx-lightbox-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "deleteOutputPath": false,
+            "outputPath": "dist",
+            "index": "projects/ngx-lightbox-demo/src/index.html",
+            "main": "projects/ngx-lightbox-demo/src/main.ts",
+            "polyfills": "projects/ngx-lightbox-demo/src/polyfills.ts",
+            "tsConfig": "projects/ngx-lightbox-demo/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ngx-lightbox-demo/src/favicon.ico",
+              "projects/ngx-lightbox-demo/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-lightbox/src/styles/lightbox.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "aot": true,
+              "optimization": true,
+              "outputHashing": "none",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngx-lightbox-demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngx-lightbox-demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngx-lightbox-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-lightbox-demo/src/test.ts",
+            "polyfills": "projects/ngx-lightbox-demo/src/polyfills.ts",
+            "tsConfig": "projects/ngx-lightbox-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-lightbox-demo/karma.conf.js",
+            "assets": [
+              "projects/ngx-lightbox-demo/src/favicon.ico",
+              "projects/ngx-lightbox-demo/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-lightbox-demo/src/styles.scss"
+            ],
             "scripts": []
           }
         },
@@ -72,11 +142,25 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.json"
+              "projects/ngx-lightbox-demo/tsconfig.app.json",
+              "projects/ngx-lightbox-demo/tsconfig.spec.json",
+              "projects/ngx-lightbox-demo/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ngx-lightbox-demo/e2e/protractor.conf.js",
+            "devServerTarget": "ngx-lightbox-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngx-lightbox-demo:serve:production"
+            }
           }
         }
       }

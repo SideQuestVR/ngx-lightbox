@@ -6,10 +6,10 @@ src/*.js
 /img
 *.metadata.json
 *.log
-/dist
 *.d.ts
 *.ngsummary.json
 .idea
+!dist/**
 .vscode
 .DS_Store
 package-lock.json

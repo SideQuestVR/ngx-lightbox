@@ -1,0 +1,9 @@
+{
+    "bundlerOptions": {
+        "entryFile": "./projects/ngx-lightbox/src/styles/lightbox.scss",
+        "outFile": "./dist/ngx-lightbox/lightbox.scss",
+        "includePaths": [
+            "./projects/ngx-lightbox/src/styles/"
+        ]
+    }
+}

@@ -2,25 +2,12 @@ import { Subscription } from 'rxjs';
 
 import { Component } from '@angular/core';
 
-import { IAlbum, IEvent, Lightbox, LIGHTBOX_EVENT, LightboxConfig, LightboxEvent } from '../src';
+import { IAlbum, IEvent, Lightbox, LIGHTBOX_EVENT, LightboxConfig, LightboxEvent } from 'ngx-lightbox';
 
 @Component({
   selector: 'demo',
-  template: `
-    <div class="column has-text-centered">
-      <div class="img-row" *ngFor="let image of albums; let i=index">
-        <img class="img-frame" [src]="image.thumb" (click)="open(i)"/>
-      </div>
-    </div>
-    <div class="huge-margin-top column has-text-centered">
-        <div class="img-row" *ngFor="let image of albums; let i=index">
-            <img class="img-frame" [src]="image.thumb" (click)="open(i)"/>
-        </div>
-    </div>
-  `,
-  host: {
-    class: 'columns'
-  }
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
   public albums: Array<IAlbum>;
@@ -32,9 +19,9 @@ export class AppComponent {
   ) {
     this.albums = [];
     for (let i = 1; i <= 4; i++) {
-      const src = 'demo/img/image' + i + '.jpg';
+      const src = 'assets/img/image' + i + '.jpg';
       const caption = 'Image ' + i + ' caption here';
-      const thumb = 'demo/img/image' + i + '-thumb.jpg';
+      const thumb = 'assets/img/image' + i + '-thumb.jpg';
       const album = {
          src: src,
          caption: caption,
@@ -45,8 +32,8 @@ export class AppComponent {
     }
 
     this.albums.push({
-      src: 'demo/img/image5.pdf',
-      thumb: 'demo/img/image5-thumb.jpg',
+      src: 'assets/img/image5.pdf',
+      thumb: 'assets/img/image5-thumb.jpg',
       iframe: true
     });
 
