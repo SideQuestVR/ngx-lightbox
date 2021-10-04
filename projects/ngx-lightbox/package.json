@@ -1,5 +1,5 @@
 {
-    "name": "@viscoci/ngx-lightbox",
+    "name": "ngx-lightbox",
     "version": "9.0.0",
     "peerDependencies": {
         "@angular/common": "^9.1.13",

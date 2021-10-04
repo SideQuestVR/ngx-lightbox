@@ -1,5 +1,5 @@
 {
-  "name": "@viscoci/ngx-lightbox",
+  "name": "ngx-lightbox",
   "version": "9.0.0",
   "peerDependencies": {
     "@angular/common": "^9.1.13",
@@ -11,14 +11,14 @@
     "url": "git+https://github.com/viscoci/ngx-lightbox.git",
     "directory": "dist/ngx-lightbox"
   },
-  "main": "bundles/viscoci-ngx-lightbox.umd.js",
-  "module": "fesm5/viscoci-ngx-lightbox.js",
-  "es2015": "fesm2015/viscoci-ngx-lightbox.js",
-  "esm5": "esm5/viscoci-ngx-lightbox.js",
-  "esm2015": "esm2015/viscoci-ngx-lightbox.js",
-  "fesm5": "fesm5/viscoci-ngx-lightbox.js",
-  "fesm2015": "fesm2015/viscoci-ngx-lightbox.js",
-  "typings": "viscoci-ngx-lightbox.d.ts",
+  "main": "bundles/ngx-lightbox.umd.js",
+  "module": "fesm5/ngx-lightbox.js",
+  "es2015": "fesm2015/ngx-lightbox.js",
+  "esm5": "esm5/ngx-lightbox.js",
+  "esm2015": "esm2015/ngx-lightbox.js",
+  "fesm5": "fesm5/ngx-lightbox.js",
+  "fesm2015": "fesm2015/ngx-lightbox.js",
+  "typings": "ngx-lightbox.d.ts",
   "sideEffects": false,
   "scripts": {
     "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"

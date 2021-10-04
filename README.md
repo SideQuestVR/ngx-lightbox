@@ -1,27 +1,27 @@
 [![Build Status](https://travis-ci.org/themyth92/ngx-lightbox.svg?branch=master)](https://travis-ci.org/themyth92/ngx-lightbox)
 
-# Ngx-Lightbox
+# Ngx-Lightbox for Angular v9
 
 A [lightbox2](https://github.com/lokesh/lightbox2) implementation port to use with new Angular without the need for jQuery
 
-## Version
-
-- For Angular 5, 6, 7, please use ngx-lightbox 1.x.x. `npm install ngx-lightbox@1.2.0`
-- For Angular >= 8, please use ngx-lightbox 2.x.x. `npm install ngx-lightbox@2.0.0`
-- For Angular 2, 4, please use [angular2-lightbox](https://github.com/themyth92/angular2-lightbox)
-
-## [Demo](https://themyth92.com/project/ngx-lightbox)
-
 ## Installation
 
-`npm install --save ngx-lightbox`
+```
+yarn add 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v9'
+```
+
+or
+
+```
+npm install 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v9
+```
 
 Update your `angular.json`
 
 ```
 {
   "styles": [
-    "./node_modules/ngx-lightbox/lightbox.css",
+    "./node_modules/@viscoci/ngx-lightbox/lightbox.scss",
     ...
   ],
 }
@@ -150,7 +150,7 @@ Available options based on lightbox2 options
 | enableTransition            | **true**         | Transition animation between images will be disabled if this flag set to **false**                                                                                                                                                          |
 | showZoom            | **false**         | Zoom Buttons will be shown if this flag set to **true**                                                                                                                                                          |
 | showRotate            | **false**         | Rotate Buttons will be shown if this flag set to **true**                                                                                                                                                                                                    |
-| containerElementResolver | () => document.body | Resolves the element that will contain the lightbox | 
+| containerElementResolver | () => document.body | Resolves the element that will contain the lightbox |
 
 
 **NOTE**: You can either override default config or during a specific opening window

@@ -1,5 +1,5 @@
 /**
  * Generated bundle index. Do not edit.
  */
-/// <amd-module name="@viscoci/ngx-lightbox" />
+/// <amd-module name="ngx-lightbox" />
 export * from './public-api';

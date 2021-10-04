@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/platform-browser'), require('rxjs')) :
-    typeof define === 'function' && define.amd ? define('@viscoci/ngx-lightbox', ['exports', '@angular/core', '@angular/common', '@angular/platform-browser', 'rxjs'], factory) :
-    (global = global || self, factory((global.viscoci = global.viscoci || {}, global.viscoci['ngx-lightbox'] = {}), global.ng.core, global.ng.common, global.ng.platformBrowser, global.rxjs));
+    typeof define === 'function' && define.amd ? define('ngx-lightbox', ['exports', '@angular/core', '@angular/common', '@angular/platform-browser', 'rxjs'], factory) :
+    (global = global || self, factory(global['ngx-lightbox'] = {}, global.ng.core, global.ng.common, global.ng.platformBrowser, global.rxjs));
 }(this, (function (exports, core, common, platformBrowser, rxjs) { 'use strict';
 
     var LIGHTBOX_EVENT = {
@@ -1024,4 +1024,4 @@
     Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=viscoci-ngx-lightbox.umd.js.map
+//# sourceMappingURL=ngx-lightbox.umd.js.map
