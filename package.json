@@ -22,6 +22,7 @@
     "core-js": "^2.6.9",
     "del-cli": "^2.0.0",
     "delay-cli": "^1.1.0",
+    "husky": "^7.0.2",
     "jasmine-core": "^3.4.0",
     "karma": "^4.1.0",
     "karma-jasmine": "^2.0.1",
