@@ -1,6 +1,8 @@
-import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, ɵɵelement, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵpipe, ɵɵpipeBind1, ɵɵsanitizeResourceUrl, ɵɵdirectiveInject, ɵɵdefinePipe, Pipe, SecurityContext, ElementRef, Renderer2, ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵlistener, ɵɵclassMap, ɵɵelementStart, ɵɵtemplate, ɵɵelementEnd, ɵɵtext, ɵɵadvance, ɵɵsanitizeHtml, ɵɵtextInterpolate, Component, Inject, Input, ViewChild, HostListener, ɵɵresolveWindow, ɵɵinject, ComponentFactoryResolver, Injector, ApplicationRef, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { DOCUMENT, NgIf, CommonModule } from '@angular/common';
-import { DomSanitizer } from '@angular/platform-browser';
+import * as i0 from '@angular/core';
+import { Injectable, Pipe, SecurityContext, Component, Inject, Input, ViewChild, HostListener, NgModule } from '@angular/core';
+import * as i3 from '@angular/common';
+import { DOCUMENT, CommonModule } from '@angular/common';
+import * as i1 from '@angular/platform-browser';
 import { Subject } from 'rxjs';
 
 const LIGHTBOX_EVENT = {
@@ -23,8 +25,8 @@ class LightboxEvent {
     }
 }
 LightboxEvent.ɵfac = function LightboxEvent_Factory(t) { return new (t || LightboxEvent)(); };
-LightboxEvent.ɵprov = ɵɵdefineInjectable({ token: LightboxEvent, factory: LightboxEvent.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(LightboxEvent, [{
+LightboxEvent.ɵprov = i0.ɵɵdefineInjectable({ token: LightboxEvent, factory: LightboxEvent.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LightboxEvent, [{
         type: Injectable,
         args: [{
                 providedIn: 'root'
@@ -39,15 +41,15 @@ class LightboxWindowRef {
     }
 }
 LightboxWindowRef.ɵfac = function LightboxWindowRef_Factory(t) { return new (t || LightboxWindowRef)(); };
-LightboxWindowRef.ɵprov = ɵɵdefineInjectable({ token: LightboxWindowRef, factory: LightboxWindowRef.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(LightboxWindowRef, [{
+LightboxWindowRef.ɵprov = i0.ɵɵdefineInjectable({ token: LightboxWindowRef, factory: LightboxWindowRef.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LightboxWindowRef, [{
         type: Injectable,
         args: [{
                 providedIn: 'root'
             }]
     }], null, null); })();
 
-const _c0 = ["outerContainer"];
+const _c0$1 = ["outerContainer"];
 const _c1 = ["container"];
 const _c2 = ["leftArrow"];
 const _c3 = ["rightArrow"];
@@ -59,17 +61,17 @@ const _c8 = ["caption"];
 const _c9 = ["number"];
 const _c10 = ["lb-content", ""];
 function LightboxComponent_img_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "img", 31, 32);
+    i0.ɵɵelement(0, "img", 31, 32);
 } if (rf & 2) {
-    const ctx_r2 = ɵɵnextContext();
-    ɵɵproperty("src", ctx_r2.album[ctx_r2.currentImageIndex].src, ɵɵsanitizeUrl)("hidden", ctx_r2.ui.showReloader);
+    const ctx_r2 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("src", ctx_r2.album[ctx_r2.currentImageIndex].src, i0.ɵɵsanitizeUrl)("hidden", ctx_r2.ui.showReloader);
 } }
 function LightboxComponent_iframe_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "iframe", 33, 34);
-    ɵɵpipe(2, "safe");
+    i0.ɵɵelement(0, "iframe", 33, 34);
+    i0.ɵɵpipe(2, "safe");
 } if (rf & 2) {
-    const ctx_r3 = ɵɵnextContext();
-    ɵɵproperty("src", ɵɵpipeBind1(2, 2, ctx_r3.album[ctx_r3.currentImageIndex].src), ɵɵsanitizeResourceUrl)("hidden", ctx_r3.ui.showReloader);
+    const ctx_r3 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("src", i0.ɵɵpipeBind1(2, 2, ctx_r3.album[ctx_r3.currentImageIndex].src), i0.ɵɵsanitizeResourceUrl)("hidden", ctx_r3.ui.showReloader);
 } }
 class SafePipe {
     constructor(sanitizer) {
@@ -79,12 +81,12 @@ class SafePipe {
         return this.sanitizer.bypassSecurityTrustResourceUrl(url);
     }
 }
-SafePipe.ɵfac = function SafePipe_Factory(t) { return new (t || SafePipe)(ɵɵdirectiveInject(DomSanitizer)); };
-SafePipe.ɵpipe = ɵɵdefinePipe({ name: "safe", type: SafePipe, pure: true });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SafePipe, [{
+SafePipe.ɵfac = function SafePipe_Factory(t) { return new (t || SafePipe)(i0.ɵɵdirectiveInject(i1.DomSanitizer)); };
+SafePipe.ɵpipe = i0.ɵɵdefinePipe({ name: "safe", type: SafePipe, pure: true });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SafePipe, [{
         type: Pipe,
         args: [{ name: 'safe' }]
-    }], function () { return [{ type: DomSanitizer }]; }, null); })();
+    }], function () { return [{ type: i1.DomSanitizer }]; }, null); })();
 class LightboxComponent {
     constructor(_elemRef, _rendererRef, _lightboxEvent, _lightboxElem, _lightboxWindowRef, _sanitizer, _documentRef) {
         this._elemRef = _elemRef;
@@ -621,113 +623,113 @@ class LightboxComponent {
         return false;
     }
 }
-LightboxComponent.ɵfac = function LightboxComponent_Factory(t) { return new (t || LightboxComponent)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Renderer2), ɵɵdirectiveInject(LightboxEvent), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(LightboxWindowRef), ɵɵdirectiveInject(DomSanitizer), ɵɵdirectiveInject(DOCUMENT)); };
-LightboxComponent.ɵcmp = ɵɵdefineComponent({ type: LightboxComponent, selectors: [["", "lb-content", ""]], viewQuery: function LightboxComponent_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(_c0, true);
-        ɵɵviewQuery(_c1, true);
-        ɵɵviewQuery(_c2, true);
-        ɵɵviewQuery(_c3, true);
-        ɵɵviewQuery(_c4, true);
-        ɵɵviewQuery(_c5, true);
-        ɵɵviewQuery(_c6, true);
-        ɵɵviewQuery(_c7, true);
-        ɵɵviewQuery(_c8, true);
-        ɵɵviewQuery(_c9, true);
+LightboxComponent.ɵfac = function LightboxComponent_Factory(t) { return new (t || LightboxComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(LightboxEvent), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(LightboxWindowRef), i0.ɵɵdirectiveInject(i1.DomSanitizer), i0.ɵɵdirectiveInject(DOCUMENT)); };
+LightboxComponent.ɵcmp = i0.ɵɵdefineComponent({ type: LightboxComponent, selectors: [["", "lb-content", ""]], viewQuery: function LightboxComponent_Query(rf, ctx) { if (rf & 1) {
+        i0.ɵɵviewQuery(_c0$1, true);
+        i0.ɵɵviewQuery(_c1, true);
+        i0.ɵɵviewQuery(_c2, true);
+        i0.ɵɵviewQuery(_c3, true);
+        i0.ɵɵviewQuery(_c4, true);
+        i0.ɵɵviewQuery(_c5, true);
+        i0.ɵɵviewQuery(_c6, true);
+        i0.ɵɵviewQuery(_c7, true);
+        i0.ɵɵviewQuery(_c8, true);
+        i0.ɵɵviewQuery(_c9, true);
     } if (rf & 2) {
         var _t;
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._outerContainerElem = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._containerElem = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._leftArrowElem = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._rightArrowElem = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._navArrowElem = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._dataContainerElem = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._imageElem = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._iframeElem = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._captionElem = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._numberElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._outerContainerElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._containerElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._leftArrowElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._rightArrowElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._navArrowElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._dataContainerElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._imageElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._iframeElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._captionElem = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._numberElem = _t.first);
     } }, hostVars: 2, hostBindings: function LightboxComponent_HostBindings(rf, ctx) { if (rf & 1) {
-        ɵɵlistener("close", function LightboxComponent_close_HostBindingHandler($event) { return ctx.close($event); });
+        i0.ɵɵlistener("close", function LightboxComponent_close_HostBindingHandler($event) { return ctx.close($event); });
     } if (rf & 2) {
-        ɵɵclassMap(ctx.ui.classList);
+        i0.ɵɵclassMap(ctx.ui.classList);
     } }, inputs: { album: "album", currentImageIndex: "currentImageIndex", options: "options", cmpRef: "cmpRef" }, attrs: _c10, decls: 32, vars: 13, consts: [["id", "outerContainer", 1, "lb-outerContainer", "transition"], ["outerContainer", ""], ["id", "container", 1, "lb-container"], ["container", ""], ["class", "lb-image", "id", "image", "class", "lb-image animation fadeIn", 3, "src", "hidden", 4, "ngIf"], ["class", "lb-image", "id", "iframe", "class", "lb-image lb-iframe animation fadeIn", 3, "src", "hidden", 4, "ngIf"], [1, "lb-nav", 3, "hidden"], ["navArrow", ""], [1, "lb-prev", 3, "hidden", "click"], ["leftArrow", ""], [1, "lb-next", 3, "hidden", "click"], ["rightArrow", ""], [1, "lb-loader", 3, "hidden", "click"], [1, "lb-cancel"], [1, "lb-dataContainer", 3, "hidden"], ["dataContainer", ""], [1, "lb-data"], [1, "lb-details"], [1, "lb-caption", "animation", "fadeIn", 3, "hidden", "innerHtml"], ["caption", ""], [1, "lb-number", "animation", "fadeIn", 3, "hidden"], ["number", ""], [1, "lb-controlContainer"], [1, "lb-closeContainer"], [1, "lb-close", 3, "click"], [1, "lb-turnContainer", 3, "hidden"], [1, "lb-turnLeft", 3, "click"], [1, "lb-turnRight", 3, "click"], [1, "lb-zoomContainer", 3, "hidden"], [1, "lb-zoomOut", 3, "click"], [1, "lb-zoomIn", 3, "click"], ["id", "image", 1, "lb-image", "animation", "fadeIn", 3, "src", "hidden"], ["image", ""], ["id", "iframe", 1, "lb-image", "lb-iframe", "animation", "fadeIn", 3, "src", "hidden"], ["iframe", ""]], template: function LightboxComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "div", 0, 1);
-        ɵɵelementStart(2, "div", 2, 3);
-        ɵɵtemplate(4, LightboxComponent_img_4_Template, 2, 2, "img", 4);
-        ɵɵtemplate(5, LightboxComponent_iframe_5_Template, 3, 4, "iframe", 5);
-        ɵɵelementStart(6, "div", 6, 7);
-        ɵɵelementStart(8, "a", 8, 9);
-        ɵɵlistener("click", function LightboxComponent_Template_a_click_8_listener() { return ctx.prevImage(); });
-        ɵɵelementEnd();
-        ɵɵelementStart(10, "a", 10, 11);
-        ɵɵlistener("click", function LightboxComponent_Template_a_click_10_listener() { return ctx.nextImage(); });
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(12, "div", 12);
-        ɵɵlistener("click", function LightboxComponent_Template_div_click_12_listener($event) { return ctx.close($event); });
-        ɵɵelement(13, "a", 13);
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(14, "div", 14, 15);
-        ɵɵelementStart(16, "div", 16);
-        ɵɵelementStart(17, "div", 17);
-        ɵɵelement(18, "span", 18, 19);
-        ɵɵelementStart(20, "span", 20, 21);
-        ɵɵtext(22);
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(23, "div", 22);
-        ɵɵelementStart(24, "div", 23);
-        ɵɵelementStart(25, "a", 24);
-        ɵɵlistener("click", function LightboxComponent_Template_a_click_25_listener($event) { return ctx.close($event); });
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(26, "div", 25);
-        ɵɵelementStart(27, "a", 26);
-        ɵɵlistener("click", function LightboxComponent_Template_a_click_27_listener($event) { return ctx.control($event); });
-        ɵɵelementEnd();
-        ɵɵelementStart(28, "a", 27);
-        ɵɵlistener("click", function LightboxComponent_Template_a_click_28_listener($event) { return ctx.control($event); });
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(29, "div", 28);
-        ɵɵelementStart(30, "a", 29);
-        ɵɵlistener("click", function LightboxComponent_Template_a_click_30_listener($event) { return ctx.control($event); });
-        ɵɵelementEnd();
-        ɵɵelementStart(31, "a", 30);
-        ɵɵlistener("click", function LightboxComponent_Template_a_click_31_listener($event) { return ctx.control($event); });
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
+        i0.ɵɵelementStart(0, "div", 0, 1);
+        i0.ɵɵelementStart(2, "div", 2, 3);
+        i0.ɵɵtemplate(4, LightboxComponent_img_4_Template, 2, 2, "img", 4);
+        i0.ɵɵtemplate(5, LightboxComponent_iframe_5_Template, 3, 4, "iframe", 5);
+        i0.ɵɵelementStart(6, "div", 6, 7);
+        i0.ɵɵelementStart(8, "a", 8, 9);
+        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_8_listener() { return ctx.prevImage(); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "a", 10, 11);
+        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_10_listener() { return ctx.nextImage(); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(12, "div", 12);
+        i0.ɵɵlistener("click", function LightboxComponent_Template_div_click_12_listener($event) { return ctx.close($event); });
+        i0.ɵɵelement(13, "a", 13);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(14, "div", 14, 15);
+        i0.ɵɵelementStart(16, "div", 16);
+        i0.ɵɵelementStart(17, "div", 17);
+        i0.ɵɵelement(18, "span", 18, 19);
+        i0.ɵɵelementStart(20, "span", 20, 21);
+        i0.ɵɵtext(22);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(23, "div", 22);
+        i0.ɵɵelementStart(24, "div", 23);
+        i0.ɵɵelementStart(25, "a", 24);
+        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_25_listener($event) { return ctx.close($event); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(26, "div", 25);
+        i0.ɵɵelementStart(27, "a", 26);
+        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_27_listener($event) { return ctx.control($event); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(28, "a", 27);
+        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_28_listener($event) { return ctx.control($event); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(29, "div", 28);
+        i0.ɵɵelementStart(30, "a", 29);
+        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_30_listener($event) { return ctx.control($event); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(31, "a", 30);
+        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_31_listener($event) { return ctx.control($event); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(4);
-        ɵɵproperty("ngIf", !ctx.album[ctx.currentImageIndex].iframe && !ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
-        ɵɵadvance(1);
-        ɵɵproperty("ngIf", ctx.album[ctx.currentImageIndex].iframe || ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
-        ɵɵadvance(1);
-        ɵɵproperty("hidden", !ctx.ui.showArrowNav);
-        ɵɵadvance(2);
-        ɵɵproperty("hidden", !ctx.ui.showLeftArrow);
-        ɵɵadvance(2);
-        ɵɵproperty("hidden", !ctx.ui.showRightArrow);
-        ɵɵadvance(2);
-        ɵɵproperty("hidden", !ctx.ui.showReloader);
-        ɵɵadvance(2);
-        ɵɵproperty("hidden", ctx.ui.showReloader);
-        ɵɵadvance(4);
-        ɵɵproperty("hidden", !ctx.ui.showCaption)("innerHtml", ctx.album[ctx.currentImageIndex].caption, ɵɵsanitizeHtml);
-        ɵɵadvance(2);
-        ɵɵproperty("hidden", !ctx.ui.showPageNumber);
-        ɵɵadvance(2);
-        ɵɵtextInterpolate(ctx.content.pageNumber);
-        ɵɵadvance(4);
-        ɵɵproperty("hidden", !ctx.ui.showRotateButton);
-        ɵɵadvance(3);
-        ɵɵproperty("hidden", !ctx.ui.showZoomButton);
-    } }, directives: [NgIf], pipes: [SafePipe], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(LightboxComponent, [{
+        i0.ɵɵadvance(4);
+        i0.ɵɵproperty("ngIf", !ctx.album[ctx.currentImageIndex].iframe && !ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.album[ctx.currentImageIndex].iframe || ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("hidden", !ctx.ui.showArrowNav);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("hidden", !ctx.ui.showLeftArrow);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("hidden", !ctx.ui.showRightArrow);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("hidden", !ctx.ui.showReloader);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("hidden", ctx.ui.showReloader);
+        i0.ɵɵadvance(4);
+        i0.ɵɵproperty("hidden", !ctx.ui.showCaption)("innerHtml", ctx.album[ctx.currentImageIndex].caption, i0.ɵɵsanitizeHtml);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("hidden", !ctx.ui.showPageNumber);
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate(ctx.content.pageNumber);
+        i0.ɵɵadvance(4);
+        i0.ɵɵproperty("hidden", !ctx.ui.showRotateButton);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("hidden", !ctx.ui.showZoomButton);
+    } }, directives: [i3.NgIf], pipes: [SafePipe], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LightboxComponent, [{
         type: Component,
         args: [{
                 selector: '[lb-content]',
@@ -736,7 +738,7 @@ LightboxComponent.ɵcmp = ɵɵdefineComponent({ type: LightboxComponent, selecto
                 },
                 templateUrl: "./lightbox.component.html",
             }]
-    }], function () { return [{ type: ElementRef }, { type: Renderer2 }, { type: LightboxEvent }, { type: ElementRef }, { type: LightboxWindowRef }, { type: DomSanitizer }, { type: undefined, decorators: [{
+    }], function () { return [{ type: i0.ElementRef }, { type: i0.Renderer2 }, { type: LightboxEvent }, { type: i0.ElementRef }, { type: LightboxWindowRef }, { type: i1.DomSanitizer }, { type: undefined, decorators: [{
                 type: Inject,
                 args: [DOCUMENT]
             }] }]; }, { album: [{
@@ -802,15 +804,15 @@ class LightboxConfig {
     }
 }
 LightboxConfig.ɵfac = function LightboxConfig_Factory(t) { return new (t || LightboxConfig)(); };
-LightboxConfig.ɵprov = ɵɵdefineInjectable({ token: LightboxConfig, factory: LightboxConfig.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(LightboxConfig, [{
+LightboxConfig.ɵprov = i0.ɵɵdefineInjectable({ token: LightboxConfig, factory: LightboxConfig.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LightboxConfig, [{
         type: Injectable,
         args: [{
                 providedIn: 'root'
             }]
     }], function () { return []; }, null); })();
 
-const _c0$1 = ["lb-overlay", ""];
+const _c0 = ["lb-overlay", ""];
 class LightboxOverlayComponent {
     constructor(_elemRef, _rendererRef, _lightboxEvent, _documentRef) {
         this._elemRef = _elemRef;
@@ -866,13 +868,13 @@ class LightboxOverlayComponent {
         return Math.max(this._documentRef.body.scrollHeight, this._documentRef.body.offsetHeight, this._documentRef.documentElement.clientHeight, this._documentRef.documentElement.scrollHeight, this._documentRef.documentElement.offsetHeight);
     }
 }
-LightboxOverlayComponent.ɵfac = function LightboxOverlayComponent_Factory(t) { return new (t || LightboxOverlayComponent)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Renderer2), ɵɵdirectiveInject(LightboxEvent), ɵɵdirectiveInject(DOCUMENT)); };
-LightboxOverlayComponent.ɵcmp = ɵɵdefineComponent({ type: LightboxOverlayComponent, selectors: [["", "lb-overlay", ""]], hostVars: 2, hostBindings: function LightboxOverlayComponent_HostBindings(rf, ctx) { if (rf & 1) {
-        ɵɵlistener("click", function LightboxOverlayComponent_click_HostBindingHandler() { return ctx.close(); })("resize", function LightboxOverlayComponent_resize_HostBindingHandler() { return ctx.onResize(); }, false, ɵɵresolveWindow);
+LightboxOverlayComponent.ɵfac = function LightboxOverlayComponent_Factory(t) { return new (t || LightboxOverlayComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(LightboxEvent), i0.ɵɵdirectiveInject(DOCUMENT)); };
+LightboxOverlayComponent.ɵcmp = i0.ɵɵdefineComponent({ type: LightboxOverlayComponent, selectors: [["", "lb-overlay", ""]], hostVars: 2, hostBindings: function LightboxOverlayComponent_HostBindings(rf, ctx) { if (rf & 1) {
+        i0.ɵɵlistener("click", function LightboxOverlayComponent_click_HostBindingHandler() { return ctx.close(); })("resize", function LightboxOverlayComponent_resize_HostBindingHandler() { return ctx.onResize(); }, false, i0.ɵɵresolveWindow);
     } if (rf & 2) {
-        ɵɵclassMap(ctx.classList);
-    } }, inputs: { options: "options", cmpRef: "cmpRef" }, attrs: _c0$1, decls: 0, vars: 0, template: function LightboxOverlayComponent_Template(rf, ctx) { }, encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(LightboxOverlayComponent, [{
+        i0.ɵɵclassMap(ctx.classList);
+    } }, inputs: { options: "options", cmpRef: "cmpRef" }, attrs: _c0, decls: 0, vars: 0, template: function LightboxOverlayComponent_Template(rf, ctx) { }, encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LightboxOverlayComponent, [{
         type: Component,
         args: [{
                 selector: '[lb-overlay]',
@@ -881,7 +883,7 @@ LightboxOverlayComponent.ɵcmp = ɵɵdefineComponent({ type: LightboxOverlayComp
                     '[class]': 'classList'
                 }
             }]
-    }], function () { return [{ type: ElementRef }, { type: Renderer2 }, { type: LightboxEvent }, { type: undefined, decorators: [{
+    }], function () { return [{ type: i0.ElementRef }, { type: i0.Renderer2 }, { type: LightboxEvent }, { type: undefined, decorators: [{
                 type: Inject,
                 args: [DOCUMENT]
             }] }]; }, { options: [{
@@ -948,29 +950,29 @@ class Lightbox {
         return component;
     }
 }
-Lightbox.ɵfac = function Lightbox_Factory(t) { return new (t || Lightbox)(ɵɵinject(ComponentFactoryResolver), ɵɵinject(Injector), ɵɵinject(ApplicationRef), ɵɵinject(LightboxConfig), ɵɵinject(LightboxEvent), ɵɵinject(DOCUMENT)); };
-Lightbox.ɵprov = ɵɵdefineInjectable({ token: Lightbox, factory: Lightbox.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(Lightbox, [{
+Lightbox.ɵfac = function Lightbox_Factory(t) { return new (t || Lightbox)(i0.ɵɵinject(i0.ComponentFactoryResolver), i0.ɵɵinject(i0.Injector), i0.ɵɵinject(i0.ApplicationRef), i0.ɵɵinject(LightboxConfig), i0.ɵɵinject(LightboxEvent), i0.ɵɵinject(DOCUMENT)); };
+Lightbox.ɵprov = i0.ɵɵdefineInjectable({ token: Lightbox, factory: Lightbox.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(Lightbox, [{
         type: Injectable,
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: ComponentFactoryResolver }, { type: Injector }, { type: ApplicationRef }, { type: LightboxConfig }, { type: LightboxEvent }, { type: undefined, decorators: [{
+    }], function () { return [{ type: i0.ComponentFactoryResolver }, { type: i0.Injector }, { type: i0.ApplicationRef }, { type: LightboxConfig }, { type: LightboxEvent }, { type: undefined, decorators: [{
                 type: Inject,
                 args: [DOCUMENT]
             }] }]; }, null); })();
 
 class LightboxModule {
 }
-LightboxModule.ɵmod = ɵɵdefineNgModule({ type: LightboxModule });
-LightboxModule.ɵinj = ɵɵdefineInjector({ factory: function LightboxModule_Factory(t) { return new (t || LightboxModule)(); }, providers: [
+LightboxModule.ɵmod = i0.ɵɵdefineNgModule({ type: LightboxModule });
+LightboxModule.ɵinj = i0.ɵɵdefineInjector({ factory: function LightboxModule_Factory(t) { return new (t || LightboxModule)(); }, providers: [
         Lightbox,
         LightboxConfig,
         LightboxEvent,
         LightboxWindowRef
     ], imports: [[CommonModule]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(LightboxModule, { declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe], imports: [CommonModule] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(LightboxModule, [{
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(LightboxModule, { declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe], imports: [CommonModule] }); })();
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LightboxModule, [{
         type: NgModule,
         args: [{
                 imports: [CommonModule],

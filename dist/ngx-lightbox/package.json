@@ -3,8 +3,10 @@
   "version": "9.0.0",
   "peerDependencies": {
     "@angular/common": "^9.1.13",
-    "@angular/core": "^9.1.13",
-    "tslib": "^1.10.0"
+    "@angular/core": "^9.1.13"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   },
   "repository": {
     "type": "git",
@@ -12,11 +14,9 @@
     "directory": "dist/ngx-lightbox"
   },
   "main": "bundles/ngx-lightbox.umd.js",
-  "module": "fesm5/ngx-lightbox.js",
+  "module": "fesm2015/ngx-lightbox.js",
   "es2015": "fesm2015/ngx-lightbox.js",
-  "esm5": "esm5/ngx-lightbox.js",
   "esm2015": "esm2015/ngx-lightbox.js",
-  "fesm5": "fesm5/ngx-lightbox.js",
   "fesm2015": "fesm2015/ngx-lightbox.js",
   "typings": "ngx-lightbox.d.ts",
   "sideEffects": false,

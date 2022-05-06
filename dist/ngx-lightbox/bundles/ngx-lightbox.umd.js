@@ -1,8 +1,30 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/platform-browser'), require('rxjs')) :
-    typeof define === 'function' && define.amd ? define('ngx-lightbox', ['exports', '@angular/core', '@angular/common', '@angular/platform-browser', 'rxjs'], factory) :
-    (global = global || self, factory(global['ngx-lightbox'] = {}, global.ng.core, global.ng.common, global.ng.platformBrowser, global.rxjs));
-}(this, (function (exports, core, common, platformBrowser, rxjs) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('rxjs'), require('@angular/platform-browser')) :
+    typeof define === 'function' && define.amd ? define('ngx-lightbox', ['exports', '@angular/core', '@angular/common', 'rxjs', '@angular/platform-browser'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["ngx-lightbox"] = {}, global.ng.core, global.ng.common, global.rxjs, global.ng.platformBrowser));
+})(this, (function (exports, i0, i3, rxjs, i1) { 'use strict';
+
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () { return e[k]; }
+                    });
+                }
+            });
+        }
+        n["default"] = e;
+        return Object.freeze(n);
+    }
+
+    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
+    var i3__namespace = /*#__PURE__*/_interopNamespace(i3);
+    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
 
     var LIGHTBOX_EVENT = {
         CHANGE_PAGE: 1,
@@ -22,16 +44,18 @@
         LightboxEvent.prototype.broadcastLightboxEvent = function (event) {
             this._lightboxEventSource.next(event);
         };
-        LightboxEvent.ɵfac = function LightboxEvent_Factory(t) { return new (t || LightboxEvent)(); };
-        LightboxEvent.ɵprov = core.ɵɵdefineInjectable({ token: LightboxEvent, factory: LightboxEvent.ɵfac, providedIn: 'root' });
         return LightboxEvent;
     }());
-    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(LightboxEvent, [{
-            type: core.Injectable,
-            args: [{
-                    providedIn: 'root'
-                }]
-        }], function () { return []; }, null); })();
+    LightboxEvent.ɵfac = function LightboxEvent_Factory(t) { return new (t || LightboxEvent)(); };
+    LightboxEvent.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: LightboxEvent, factory: LightboxEvent.ɵfac, providedIn: 'root' });
+    /*@__PURE__*/ (function () {
+        i0__namespace.ɵsetClassMetadata(LightboxEvent, [{
+                type: i0.Injectable,
+                args: [{
+                        providedIn: 'root'
+                    }]
+            }], function () { return []; }, null);
+    })();
     function getWindow() {
         return window;
     }
@@ -42,21 +66,23 @@
             get: function () {
                 return getWindow();
             },
-            enumerable: true,
+            enumerable: false,
             configurable: true
         });
-        LightboxWindowRef.ɵfac = function LightboxWindowRef_Factory(t) { return new (t || LightboxWindowRef)(); };
-        LightboxWindowRef.ɵprov = core.ɵɵdefineInjectable({ token: LightboxWindowRef, factory: LightboxWindowRef.ɵfac, providedIn: 'root' });
         return LightboxWindowRef;
     }());
-    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(LightboxWindowRef, [{
-            type: core.Injectable,
-            args: [{
-                    providedIn: 'root'
-                }]
-        }], null, null); })();
+    LightboxWindowRef.ɵfac = function LightboxWindowRef_Factory(t) { return new (t || LightboxWindowRef)(); };
+    LightboxWindowRef.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: LightboxWindowRef, factory: LightboxWindowRef.ɵfac, providedIn: 'root' });
+    /*@__PURE__*/ (function () {
+        i0__namespace.ɵsetClassMetadata(LightboxWindowRef, [{
+                type: i0.Injectable,
+                args: [{
+                        providedIn: 'root'
+                    }]
+            }], null, null);
+    })();
 
-    var _c0 = ["outerContainer"];
+    var _c0$1 = ["outerContainer"];
     var _c1 = ["container"];
     var _c2 = ["leftArrow"];
     var _c3 = ["rightArrow"];
@@ -67,19 +93,25 @@
     var _c8 = ["caption"];
     var _c9 = ["number"];
     var _c10 = ["lb-content", ""];
-    function LightboxComponent_img_4_Template(rf, ctx) { if (rf & 1) {
-        core.ɵɵelement(0, "img", 31, 32);
-    } if (rf & 2) {
-        var ctx_r2 = core.ɵɵnextContext();
-        core.ɵɵproperty("src", ctx_r2.album[ctx_r2.currentImageIndex].src, core.ɵɵsanitizeUrl)("hidden", ctx_r2.ui.showReloader);
-    } }
-    function LightboxComponent_iframe_5_Template(rf, ctx) { if (rf & 1) {
-        core.ɵɵelement(0, "iframe", 33, 34);
-        core.ɵɵpipe(2, "safe");
-    } if (rf & 2) {
-        var ctx_r3 = core.ɵɵnextContext();
-        core.ɵɵproperty("src", core.ɵɵpipeBind1(2, 2, ctx_r3.album[ctx_r3.currentImageIndex].src), core.ɵɵsanitizeResourceUrl)("hidden", ctx_r3.ui.showReloader);
-    } }
+    function LightboxComponent_img_4_Template(rf, ctx) {
+        if (rf & 1) {
+            i0__namespace.ɵɵelement(0, "img", 31, 32);
+        }
+        if (rf & 2) {
+            var ctx_r2 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("src", ctx_r2.album[ctx_r2.currentImageIndex].src, i0__namespace.ɵɵsanitizeUrl)("hidden", ctx_r2.ui.showReloader);
+        }
+    }
+    function LightboxComponent_iframe_5_Template(rf, ctx) {
+        if (rf & 1) {
+            i0__namespace.ɵɵelement(0, "iframe", 33, 34);
+            i0__namespace.ɵɵpipe(2, "safe");
+        }
+        if (rf & 2) {
+            var ctx_r3 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("src", i0__namespace.ɵɵpipeBind1(2, 2, ctx_r3.album[ctx_r3.currentImageIndex].src), i0__namespace.ɵɵsanitizeResourceUrl)("hidden", ctx_r3.ui.showReloader);
+        }
+    }
     var SafePipe = /** @class */ (function () {
         function SafePipe(sanitizer) {
             this.sanitizer = sanitizer;
@@ -87,14 +119,16 @@
         SafePipe.prototype.transform = function (url) {
             return this.sanitizer.bypassSecurityTrustResourceUrl(url);
         };
-        SafePipe.ɵfac = function SafePipe_Factory(t) { return new (t || SafePipe)(core.ɵɵdirectiveInject(platformBrowser.DomSanitizer)); };
-        SafePipe.ɵpipe = core.ɵɵdefinePipe({ name: "safe", type: SafePipe, pure: true });
         return SafePipe;
     }());
-    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(SafePipe, [{
-            type: core.Pipe,
-            args: [{ name: 'safe' }]
-        }], function () { return [{ type: platformBrowser.DomSanitizer }]; }, null); })();
+    SafePipe.ɵfac = function SafePipe_Factory(t) { return new (t || SafePipe)(i0__namespace.ɵɵdirectiveInject(i1__namespace.DomSanitizer)); };
+    SafePipe.ɵpipe = i0__namespace.ɵɵdefinePipe({ name: "safe", type: SafePipe, pure: true });
+    /*@__PURE__*/ (function () {
+        i0__namespace.ɵsetClassMetadata(SafePipe, [{
+                type: i0.Pipe,
+                args: [{ name: 'safe' }]
+            }], function () { return [{ type: i1__namespace.DomSanitizer }]; }, null);
+    })();
     var LightboxComponent = /** @class */ (function () {
         function LightboxComponent(_elemRef, _rendererRef, _lightboxEvent, _lightboxElem, _lightboxWindowRef, _sanitizer, _documentRef) {
             var _this = this;
@@ -144,7 +178,7 @@
             var _this = this;
             this.album.forEach(function (album) {
                 if (album.caption) {
-                    album.caption = _this._sanitizer.sanitize(core.SecurityContext.HTML, album.caption);
+                    album.caption = _this._sanitizer.sanitize(i0.SecurityContext.HTML, album.caption);
                 }
             });
         };
@@ -331,7 +365,7 @@
             preloader.onerror = function (e) {
                 _this._lightboxEvent.broadcastLightboxEvent({ id: LIGHTBOX_EVENT.FILE_NOT_FOUND, data: e });
             };
-            preloader.src = this._sanitizer.sanitize(core.SecurityContext.URL, src);
+            preloader.src = this._sanitizer.sanitize(i0.SecurityContext.URL, src);
         };
         /**
          * Fire when the image is loaded
@@ -637,199 +671,183 @@
             }
             return false;
         };
-        LightboxComponent.ɵfac = function LightboxComponent_Factory(t) { return new (t || LightboxComponent)(core.ɵɵdirectiveInject(core.ElementRef), core.ɵɵdirectiveInject(core.Renderer2), core.ɵɵdirectiveInject(LightboxEvent), core.ɵɵdirectiveInject(core.ElementRef), core.ɵɵdirectiveInject(LightboxWindowRef), core.ɵɵdirectiveInject(platformBrowser.DomSanitizer), core.ɵɵdirectiveInject(common.DOCUMENT)); };
-        LightboxComponent.ɵcmp = core.ɵɵdefineComponent({ type: LightboxComponent, selectors: [["", "lb-content", ""]], viewQuery: function LightboxComponent_Query(rf, ctx) { if (rf & 1) {
-                core.ɵɵviewQuery(_c0, true);
-                core.ɵɵviewQuery(_c1, true);
-                core.ɵɵviewQuery(_c2, true);
-                core.ɵɵviewQuery(_c3, true);
-                core.ɵɵviewQuery(_c4, true);
-                core.ɵɵviewQuery(_c5, true);
-                core.ɵɵviewQuery(_c6, true);
-                core.ɵɵviewQuery(_c7, true);
-                core.ɵɵviewQuery(_c8, true);
-                core.ɵɵviewQuery(_c9, true);
-            } if (rf & 2) {
-                var _t;
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._outerContainerElem = _t.first);
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._containerElem = _t.first);
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._leftArrowElem = _t.first);
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._rightArrowElem = _t.first);
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._navArrowElem = _t.first);
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._dataContainerElem = _t.first);
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._imageElem = _t.first);
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._iframeElem = _t.first);
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._captionElem = _t.first);
-                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx._numberElem = _t.first);
-            } }, hostVars: 2, hostBindings: function LightboxComponent_HostBindings(rf, ctx) { if (rf & 1) {
-                core.ɵɵlistener("close", function LightboxComponent_close_HostBindingHandler($event) { return ctx.close($event); });
-            } if (rf & 2) {
-                core.ɵɵclassMap(ctx.ui.classList);
-            } }, inputs: { album: "album", currentImageIndex: "currentImageIndex", options: "options", cmpRef: "cmpRef" }, attrs: _c10, decls: 32, vars: 13, consts: [["id", "outerContainer", 1, "lb-outerContainer", "transition"], ["outerContainer", ""], ["id", "container", 1, "lb-container"], ["container", ""], ["class", "lb-image", "id", "image", "class", "lb-image animation fadeIn", 3, "src", "hidden", 4, "ngIf"], ["class", "lb-image", "id", "iframe", "class", "lb-image lb-iframe animation fadeIn", 3, "src", "hidden", 4, "ngIf"], [1, "lb-nav", 3, "hidden"], ["navArrow", ""], [1, "lb-prev", 3, "hidden", "click"], ["leftArrow", ""], [1, "lb-next", 3, "hidden", "click"], ["rightArrow", ""], [1, "lb-loader", 3, "hidden", "click"], [1, "lb-cancel"], [1, "lb-dataContainer", 3, "hidden"], ["dataContainer", ""], [1, "lb-data"], [1, "lb-details"], [1, "lb-caption", "animation", "fadeIn", 3, "hidden", "innerHtml"], ["caption", ""], [1, "lb-number", "animation", "fadeIn", 3, "hidden"], ["number", ""], [1, "lb-controlContainer"], [1, "lb-closeContainer"], [1, "lb-close", 3, "click"], [1, "lb-turnContainer", 3, "hidden"], [1, "lb-turnLeft", 3, "click"], [1, "lb-turnRight", 3, "click"], [1, "lb-zoomContainer", 3, "hidden"], [1, "lb-zoomOut", 3, "click"], [1, "lb-zoomIn", 3, "click"], ["id", "image", 1, "lb-image", "animation", "fadeIn", 3, "src", "hidden"], ["image", ""], ["id", "iframe", 1, "lb-image", "lb-iframe", "animation", "fadeIn", 3, "src", "hidden"], ["iframe", ""]], template: function LightboxComponent_Template(rf, ctx) { if (rf & 1) {
-                core.ɵɵelementStart(0, "div", 0, 1);
-                core.ɵɵelementStart(2, "div", 2, 3);
-                core.ɵɵtemplate(4, LightboxComponent_img_4_Template, 2, 2, "img", 4);
-                core.ɵɵtemplate(5, LightboxComponent_iframe_5_Template, 3, 4, "iframe", 5);
-                core.ɵɵelementStart(6, "div", 6, 7);
-                core.ɵɵelementStart(8, "a", 8, 9);
-                core.ɵɵlistener("click", function LightboxComponent_Template_a_click_8_listener() { return ctx.prevImage(); });
-                core.ɵɵelementEnd();
-                core.ɵɵelementStart(10, "a", 10, 11);
-                core.ɵɵlistener("click", function LightboxComponent_Template_a_click_10_listener() { return ctx.nextImage(); });
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-                core.ɵɵelementStart(12, "div", 12);
-                core.ɵɵlistener("click", function LightboxComponent_Template_div_click_12_listener($event) { return ctx.close($event); });
-                core.ɵɵelement(13, "a", 13);
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-                core.ɵɵelementStart(14, "div", 14, 15);
-                core.ɵɵelementStart(16, "div", 16);
-                core.ɵɵelementStart(17, "div", 17);
-                core.ɵɵelement(18, "span", 18, 19);
-                core.ɵɵelementStart(20, "span", 20, 21);
-                core.ɵɵtext(22);
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-                core.ɵɵelementStart(23, "div", 22);
-                core.ɵɵelementStart(24, "div", 23);
-                core.ɵɵelementStart(25, "a", 24);
-                core.ɵɵlistener("click", function LightboxComponent_Template_a_click_25_listener($event) { return ctx.close($event); });
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-                core.ɵɵelementStart(26, "div", 25);
-                core.ɵɵelementStart(27, "a", 26);
-                core.ɵɵlistener("click", function LightboxComponent_Template_a_click_27_listener($event) { return ctx.control($event); });
-                core.ɵɵelementEnd();
-                core.ɵɵelementStart(28, "a", 27);
-                core.ɵɵlistener("click", function LightboxComponent_Template_a_click_28_listener($event) { return ctx.control($event); });
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-                core.ɵɵelementStart(29, "div", 28);
-                core.ɵɵelementStart(30, "a", 29);
-                core.ɵɵlistener("click", function LightboxComponent_Template_a_click_30_listener($event) { return ctx.control($event); });
-                core.ɵɵelementEnd();
-                core.ɵɵelementStart(31, "a", 30);
-                core.ɵɵlistener("click", function LightboxComponent_Template_a_click_31_listener($event) { return ctx.control($event); });
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-                core.ɵɵelementEnd();
-            } if (rf & 2) {
-                core.ɵɵadvance(4);
-                core.ɵɵproperty("ngIf", !ctx.album[ctx.currentImageIndex].iframe && !ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
-                core.ɵɵadvance(1);
-                core.ɵɵproperty("ngIf", ctx.album[ctx.currentImageIndex].iframe || ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
-                core.ɵɵadvance(1);
-                core.ɵɵproperty("hidden", !ctx.ui.showArrowNav);
-                core.ɵɵadvance(2);
-                core.ɵɵproperty("hidden", !ctx.ui.showLeftArrow);
-                core.ɵɵadvance(2);
-                core.ɵɵproperty("hidden", !ctx.ui.showRightArrow);
-                core.ɵɵadvance(2);
-                core.ɵɵproperty("hidden", !ctx.ui.showReloader);
-                core.ɵɵadvance(2);
-                core.ɵɵproperty("hidden", ctx.ui.showReloader);
-                core.ɵɵadvance(4);
-                core.ɵɵproperty("hidden", !ctx.ui.showCaption)("innerHtml", ctx.album[ctx.currentImageIndex].caption, core.ɵɵsanitizeHtml);
-                core.ɵɵadvance(2);
-                core.ɵɵproperty("hidden", !ctx.ui.showPageNumber);
-                core.ɵɵadvance(2);
-                core.ɵɵtextInterpolate(ctx.content.pageNumber);
-                core.ɵɵadvance(4);
-                core.ɵɵproperty("hidden", !ctx.ui.showRotateButton);
-                core.ɵɵadvance(3);
-                core.ɵɵproperty("hidden", !ctx.ui.showZoomButton);
-            } }, directives: [common.NgIf], pipes: [SafePipe], encapsulation: 2 });
         return LightboxComponent;
     }());
-    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(LightboxComponent, [{
-            type: core.Component,
-            args: [{
-                    selector: '[lb-content]',
-                    host: {
-                        '[class]': 'ui.classList'
-                    },
-                    templateUrl: "./lightbox.component.html",
-                }]
-        }], function () { return [{ type: core.ElementRef }, { type: core.Renderer2 }, { type: LightboxEvent }, { type: core.ElementRef }, { type: LightboxWindowRef }, { type: platformBrowser.DomSanitizer }, { type: undefined, decorators: [{
-                    type: core.Inject,
-                    args: [common.DOCUMENT]
-                }] }]; }, { album: [{
-                type: core.Input
-            }], currentImageIndex: [{
-                type: core.Input
-            }], options: [{
-                type: core.Input
-            }], cmpRef: [{
-                type: core.Input
-            }], _outerContainerElem: [{
-                type: core.ViewChild,
-                args: ['outerContainer']
-            }], _containerElem: [{
-                type: core.ViewChild,
-                args: ['container']
-            }], _leftArrowElem: [{
-                type: core.ViewChild,
-                args: ['leftArrow']
-            }], _rightArrowElem: [{
-                type: core.ViewChild,
-                args: ['rightArrow']
-            }], _navArrowElem: [{
-                type: core.ViewChild,
-                args: ['navArrow']
-            }], _dataContainerElem: [{
-                type: core.ViewChild,
-                args: ['dataContainer']
-            }], _imageElem: [{
-                type: core.ViewChild,
-                args: ['image']
-            }], _iframeElem: [{
-                type: core.ViewChild,
-                args: ['iframe']
-            }], _captionElem: [{
-                type: core.ViewChild,
-                args: ['caption']
-            }], _numberElem: [{
-                type: core.ViewChild,
-                args: ['number']
-            }], close: [{
-                type: core.HostListener,
-                args: ['close', ['$event']]
-            }] }); })();
+    LightboxComponent.ɵfac = function LightboxComponent_Factory(t) { return new (t || LightboxComponent)(i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef), i0__namespace.ɵɵdirectiveInject(i0__namespace.Renderer2), i0__namespace.ɵɵdirectiveInject(LightboxEvent), i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef), i0__namespace.ɵɵdirectiveInject(LightboxWindowRef), i0__namespace.ɵɵdirectiveInject(i1__namespace.DomSanitizer), i0__namespace.ɵɵdirectiveInject(i3.DOCUMENT)); };
+    LightboxComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: LightboxComponent, selectors: [["", "lb-content", ""]], viewQuery: function LightboxComponent_Query(rf, ctx) {
+            if (rf & 1) {
+                i0__namespace.ɵɵviewQuery(_c0$1, true);
+                i0__namespace.ɵɵviewQuery(_c1, true);
+                i0__namespace.ɵɵviewQuery(_c2, true);
+                i0__namespace.ɵɵviewQuery(_c3, true);
+                i0__namespace.ɵɵviewQuery(_c4, true);
+                i0__namespace.ɵɵviewQuery(_c5, true);
+                i0__namespace.ɵɵviewQuery(_c6, true);
+                i0__namespace.ɵɵviewQuery(_c7, true);
+                i0__namespace.ɵɵviewQuery(_c8, true);
+                i0__namespace.ɵɵviewQuery(_c9, true);
+            }
+            if (rf & 2) {
+                var _t;
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._outerContainerElem = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._containerElem = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._leftArrowElem = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._rightArrowElem = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._navArrowElem = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._dataContainerElem = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._imageElem = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._iframeElem = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._captionElem = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._numberElem = _t.first);
+            }
+        }, hostVars: 2, hostBindings: function LightboxComponent_HostBindings(rf, ctx) {
+            if (rf & 1) {
+                i0__namespace.ɵɵlistener("close", function LightboxComponent_close_HostBindingHandler($event) { return ctx.close($event); });
+            }
+            if (rf & 2) {
+                i0__namespace.ɵɵclassMap(ctx.ui.classList);
+            }
+        }, inputs: { album: "album", currentImageIndex: "currentImageIndex", options: "options", cmpRef: "cmpRef" }, attrs: _c10, decls: 32, vars: 13, consts: [["id", "outerContainer", 1, "lb-outerContainer", "transition"], ["outerContainer", ""], ["id", "container", 1, "lb-container"], ["container", ""], ["class", "lb-image", "id", "image", "class", "lb-image animation fadeIn", 3, "src", "hidden", 4, "ngIf"], ["class", "lb-image", "id", "iframe", "class", "lb-image lb-iframe animation fadeIn", 3, "src", "hidden", 4, "ngIf"], [1, "lb-nav", 3, "hidden"], ["navArrow", ""], [1, "lb-prev", 3, "hidden", "click"], ["leftArrow", ""], [1, "lb-next", 3, "hidden", "click"], ["rightArrow", ""], [1, "lb-loader", 3, "hidden", "click"], [1, "lb-cancel"], [1, "lb-dataContainer", 3, "hidden"], ["dataContainer", ""], [1, "lb-data"], [1, "lb-details"], [1, "lb-caption", "animation", "fadeIn", 3, "hidden", "innerHtml"], ["caption", ""], [1, "lb-number", "animation", "fadeIn", 3, "hidden"], ["number", ""], [1, "lb-controlContainer"], [1, "lb-closeContainer"], [1, "lb-close", 3, "click"], [1, "lb-turnContainer", 3, "hidden"], [1, "lb-turnLeft", 3, "click"], [1, "lb-turnRight", 3, "click"], [1, "lb-zoomContainer", 3, "hidden"], [1, "lb-zoomOut", 3, "click"], [1, "lb-zoomIn", 3, "click"], ["id", "image", 1, "lb-image", "animation", "fadeIn", 3, "src", "hidden"], ["image", ""], ["id", "iframe", 1, "lb-image", "lb-iframe", "animation", "fadeIn", 3, "src", "hidden"], ["iframe", ""]], template: function LightboxComponent_Template(rf, ctx) {
+            if (rf & 1) {
+                i0__namespace.ɵɵelementStart(0, "div", 0, 1);
+                i0__namespace.ɵɵelementStart(2, "div", 2, 3);
+                i0__namespace.ɵɵtemplate(4, LightboxComponent_img_4_Template, 2, 2, "img", 4);
+                i0__namespace.ɵɵtemplate(5, LightboxComponent_iframe_5_Template, 3, 4, "iframe", 5);
+                i0__namespace.ɵɵelementStart(6, "div", 6, 7);
+                i0__namespace.ɵɵelementStart(8, "a", 8, 9);
+                i0__namespace.ɵɵlistener("click", function LightboxComponent_Template_a_click_8_listener() { return ctx.prevImage(); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(10, "a", 10, 11);
+                i0__namespace.ɵɵlistener("click", function LightboxComponent_Template_a_click_10_listener() { return ctx.nextImage(); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(12, "div", 12);
+                i0__namespace.ɵɵlistener("click", function LightboxComponent_Template_div_click_12_listener($event) { return ctx.close($event); });
+                i0__namespace.ɵɵelement(13, "a", 13);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(14, "div", 14, 15);
+                i0__namespace.ɵɵelementStart(16, "div", 16);
+                i0__namespace.ɵɵelementStart(17, "div", 17);
+                i0__namespace.ɵɵelement(18, "span", 18, 19);
+                i0__namespace.ɵɵelementStart(20, "span", 20, 21);
+                i0__namespace.ɵɵtext(22);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(23, "div", 22);
+                i0__namespace.ɵɵelementStart(24, "div", 23);
+                i0__namespace.ɵɵelementStart(25, "a", 24);
+                i0__namespace.ɵɵlistener("click", function LightboxComponent_Template_a_click_25_listener($event) { return ctx.close($event); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(26, "div", 25);
+                i0__namespace.ɵɵelementStart(27, "a", 26);
+                i0__namespace.ɵɵlistener("click", function LightboxComponent_Template_a_click_27_listener($event) { return ctx.control($event); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(28, "a", 27);
+                i0__namespace.ɵɵlistener("click", function LightboxComponent_Template_a_click_28_listener($event) { return ctx.control($event); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(29, "div", 28);
+                i0__namespace.ɵɵelementStart(30, "a", 29);
+                i0__namespace.ɵɵlistener("click", function LightboxComponent_Template_a_click_30_listener($event) { return ctx.control($event); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(31, "a", 30);
+                i0__namespace.ɵɵlistener("click", function LightboxComponent_Template_a_click_31_listener($event) { return ctx.control($event); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("ngIf", !ctx.album[ctx.currentImageIndex].iframe && !ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngIf", ctx.album[ctx.currentImageIndex].iframe || ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("hidden", !ctx.ui.showArrowNav);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("hidden", !ctx.ui.showLeftArrow);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("hidden", !ctx.ui.showRightArrow);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("hidden", !ctx.ui.showReloader);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("hidden", ctx.ui.showReloader);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("hidden", !ctx.ui.showCaption)("innerHtml", ctx.album[ctx.currentImageIndex].caption, i0__namespace.ɵɵsanitizeHtml);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("hidden", !ctx.ui.showPageNumber);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵtextInterpolate(ctx.content.pageNumber);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("hidden", !ctx.ui.showRotateButton);
+                i0__namespace.ɵɵadvance(3);
+                i0__namespace.ɵɵproperty("hidden", !ctx.ui.showZoomButton);
+            }
+        }, directives: [i3__namespace.NgIf], pipes: [SafePipe], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0__namespace.ɵsetClassMetadata(LightboxComponent, [{
+                type: i0.Component,
+                args: [{
+                        selector: '[lb-content]',
+                        host: {
+                            '[class]': 'ui.classList'
+                        },
+                        templateUrl: "./lightbox.component.html",
+                    }]
+            }], function () {
+            return [{ type: i0__namespace.ElementRef }, { type: i0__namespace.Renderer2 }, { type: LightboxEvent }, { type: i0__namespace.ElementRef }, { type: LightboxWindowRef }, { type: i1__namespace.DomSanitizer }, { type: undefined, decorators: [{
+                            type: i0.Inject,
+                            args: [i3.DOCUMENT]
+                        }] }];
+        }, { album: [{
+                    type: i0.Input
+                }], currentImageIndex: [{
+                    type: i0.Input
+                }], options: [{
+                    type: i0.Input
+                }], cmpRef: [{
+                    type: i0.Input
+                }], _outerContainerElem: [{
+                    type: i0.ViewChild,
+                    args: ['outerContainer']
+                }], _containerElem: [{
+                    type: i0.ViewChild,
+                    args: ['container']
+                }], _leftArrowElem: [{
+                    type: i0.ViewChild,
+                    args: ['leftArrow']
+                }], _rightArrowElem: [{
+                    type: i0.ViewChild,
+                    args: ['rightArrow']
+                }], _navArrowElem: [{
+                    type: i0.ViewChild,
+                    args: ['navArrow']
+                }], _dataContainerElem: [{
+                    type: i0.ViewChild,
+                    args: ['dataContainer']
+                }], _imageElem: [{
+                    type: i0.ViewChild,
+                    args: ['image']
+                }], _iframeElem: [{
+                    type: i0.ViewChild,
+                    args: ['iframe']
+                }], _captionElem: [{
+                    type: i0.ViewChild,
+                    args: ['caption']
+                }], _numberElem: [{
+                    type: i0.ViewChild,
+                    args: ['number']
+                }], close: [{
+                    type: i0.HostListener,
+                    args: ['close', ['$event']]
+                }] });
+    })();
 
-    var LightboxConfig = /** @class */ (function () {
-        function LightboxConfig() {
-            this.fadeDuration = 0.7;
-            this.resizeDuration = 0.5;
-            this.fitImageInViewPort = true;
-            this.positionFromTop = 20;
-            this.showImageNumberLabel = false;
-            this.alwaysShowNavOnTouchDevices = false;
-            this.wrapAround = false;
-            this.disableKeyboardNav = false;
-            this.disableScrolling = false;
-            this.centerVertically = false;
-            this.enableTransition = true;
-            this.albumLabel = 'Image %1 of %2';
-            this.showZoom = false;
-            this.showRotate = false;
-            this.containerElementResolver = function (documentRef) { return documentRef.querySelector('body'); };
-        }
-        LightboxConfig.ɵfac = function LightboxConfig_Factory(t) { return new (t || LightboxConfig)(); };
-        LightboxConfig.ɵprov = core.ɵɵdefineInjectable({ token: LightboxConfig, factory: LightboxConfig.ɵfac, providedIn: 'root' });
-        return LightboxConfig;
-    }());
-    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(LightboxConfig, [{
-            type: core.Injectable,
-            args: [{
-                    providedIn: 'root'
-                }]
-        }], function () { return []; }, null); })();
-
-    var _c0$1 = ["lb-overlay", ""];
+    var _c0 = ["lb-overlay", ""];
     var LightboxOverlayComponent = /** @class */ (function () {
         function LightboxOverlayComponent(_elemRef, _rendererRef, _lightboxEvent, _documentRef) {
             var _this = this;
@@ -886,37 +904,75 @@
         LightboxOverlayComponent.prototype._getOverlayHeight = function () {
             return Math.max(this._documentRef.body.scrollHeight, this._documentRef.body.offsetHeight, this._documentRef.documentElement.clientHeight, this._documentRef.documentElement.scrollHeight, this._documentRef.documentElement.offsetHeight);
         };
-        LightboxOverlayComponent.ɵfac = function LightboxOverlayComponent_Factory(t) { return new (t || LightboxOverlayComponent)(core.ɵɵdirectiveInject(core.ElementRef), core.ɵɵdirectiveInject(core.Renderer2), core.ɵɵdirectiveInject(LightboxEvent), core.ɵɵdirectiveInject(common.DOCUMENT)); };
-        LightboxOverlayComponent.ɵcmp = core.ɵɵdefineComponent({ type: LightboxOverlayComponent, selectors: [["", "lb-overlay", ""]], hostVars: 2, hostBindings: function LightboxOverlayComponent_HostBindings(rf, ctx) { if (rf & 1) {
-                core.ɵɵlistener("click", function LightboxOverlayComponent_click_HostBindingHandler() { return ctx.close(); })("resize", function LightboxOverlayComponent_resize_HostBindingHandler() { return ctx.onResize(); }, false, core.ɵɵresolveWindow);
-            } if (rf & 2) {
-                core.ɵɵclassMap(ctx.classList);
-            } }, inputs: { options: "options", cmpRef: "cmpRef" }, attrs: _c0$1, decls: 0, vars: 0, template: function LightboxOverlayComponent_Template(rf, ctx) { }, encapsulation: 2 });
         return LightboxOverlayComponent;
     }());
-    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(LightboxOverlayComponent, [{
-            type: core.Component,
-            args: [{
-                    selector: '[lb-overlay]',
-                    template: '',
-                    host: {
-                        '[class]': 'classList'
-                    }
-                }]
-        }], function () { return [{ type: core.ElementRef }, { type: core.Renderer2 }, { type: LightboxEvent }, { type: undefined, decorators: [{
-                    type: core.Inject,
-                    args: [common.DOCUMENT]
-                }] }]; }, { options: [{
-                type: core.Input
-            }], cmpRef: [{
-                type: core.Input
-            }], close: [{
-                type: core.HostListener,
-                args: ['click']
-            }], onResize: [{
-                type: core.HostListener,
-                args: ['window:resize']
-            }] }); })();
+    LightboxOverlayComponent.ɵfac = function LightboxOverlayComponent_Factory(t) { return new (t || LightboxOverlayComponent)(i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef), i0__namespace.ɵɵdirectiveInject(i0__namespace.Renderer2), i0__namespace.ɵɵdirectiveInject(LightboxEvent), i0__namespace.ɵɵdirectiveInject(i3.DOCUMENT)); };
+    LightboxOverlayComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: LightboxOverlayComponent, selectors: [["", "lb-overlay", ""]], hostVars: 2, hostBindings: function LightboxOverlayComponent_HostBindings(rf, ctx) {
+            if (rf & 1) {
+                i0__namespace.ɵɵlistener("click", function LightboxOverlayComponent_click_HostBindingHandler() { return ctx.close(); })("resize", function LightboxOverlayComponent_resize_HostBindingHandler() { return ctx.onResize(); }, false, i0__namespace.ɵɵresolveWindow);
+            }
+            if (rf & 2) {
+                i0__namespace.ɵɵclassMap(ctx.classList);
+            }
+        }, inputs: { options: "options", cmpRef: "cmpRef" }, attrs: _c0, decls: 0, vars: 0, template: function LightboxOverlayComponent_Template(rf, ctx) { }, encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0__namespace.ɵsetClassMetadata(LightboxOverlayComponent, [{
+                type: i0.Component,
+                args: [{
+                        selector: '[lb-overlay]',
+                        template: '',
+                        host: {
+                            '[class]': 'classList'
+                        }
+                    }]
+            }], function () {
+            return [{ type: i0__namespace.ElementRef }, { type: i0__namespace.Renderer2 }, { type: LightboxEvent }, { type: undefined, decorators: [{
+                            type: i0.Inject,
+                            args: [i3.DOCUMENT]
+                        }] }];
+        }, { options: [{
+                    type: i0.Input
+                }], cmpRef: [{
+                    type: i0.Input
+                }], close: [{
+                    type: i0.HostListener,
+                    args: ['click']
+                }], onResize: [{
+                    type: i0.HostListener,
+                    args: ['window:resize']
+                }] });
+    })();
+
+    var LightboxConfig = /** @class */ (function () {
+        function LightboxConfig() {
+            this.fadeDuration = 0.7;
+            this.resizeDuration = 0.5;
+            this.fitImageInViewPort = true;
+            this.positionFromTop = 20;
+            this.showImageNumberLabel = false;
+            this.alwaysShowNavOnTouchDevices = false;
+            this.wrapAround = false;
+            this.disableKeyboardNav = false;
+            this.disableScrolling = false;
+            this.centerVertically = false;
+            this.enableTransition = true;
+            this.albumLabel = 'Image %1 of %2';
+            this.showZoom = false;
+            this.showRotate = false;
+            this.containerElementResolver = function (documentRef) { return documentRef.querySelector('body'); };
+        }
+        return LightboxConfig;
+    }());
+    LightboxConfig.ɵfac = function LightboxConfig_Factory(t) { return new (t || LightboxConfig)(); };
+    LightboxConfig.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: LightboxConfig, factory: LightboxConfig.ɵfac, providedIn: 'root' });
+    /*@__PURE__*/ (function () {
+        i0__namespace.ɵsetClassMetadata(LightboxConfig, [{
+                type: i0.Injectable,
+                args: [{
+                        providedIn: 'root'
+                    }]
+            }], function () { return []; }, null);
+    })();
 
     var Lightbox = /** @class */ (function () {
         function Lightbox(_componentFactoryResolver, _injector, _applicationRef, _lightboxConfig, _lightboxEvent, _documentRef) {
@@ -972,47 +1028,57 @@
             var component = factory.create(this._injector);
             return component;
         };
-        Lightbox.ɵfac = function Lightbox_Factory(t) { return new (t || Lightbox)(core.ɵɵinject(core.ComponentFactoryResolver), core.ɵɵinject(core.Injector), core.ɵɵinject(core.ApplicationRef), core.ɵɵinject(LightboxConfig), core.ɵɵinject(LightboxEvent), core.ɵɵinject(common.DOCUMENT)); };
-        Lightbox.ɵprov = core.ɵɵdefineInjectable({ token: Lightbox, factory: Lightbox.ɵfac, providedIn: 'root' });
         return Lightbox;
     }());
-    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(Lightbox, [{
-            type: core.Injectable,
-            args: [{
-                    providedIn: 'root'
-                }]
-        }], function () { return [{ type: core.ComponentFactoryResolver }, { type: core.Injector }, { type: core.ApplicationRef }, { type: LightboxConfig }, { type: LightboxEvent }, { type: undefined, decorators: [{
-                    type: core.Inject,
-                    args: [common.DOCUMENT]
-                }] }]; }, null); })();
+    Lightbox.ɵfac = function Lightbox_Factory(t) { return new (t || Lightbox)(i0__namespace.ɵɵinject(i0__namespace.ComponentFactoryResolver), i0__namespace.ɵɵinject(i0__namespace.Injector), i0__namespace.ɵɵinject(i0__namespace.ApplicationRef), i0__namespace.ɵɵinject(LightboxConfig), i0__namespace.ɵɵinject(LightboxEvent), i0__namespace.ɵɵinject(i3.DOCUMENT)); };
+    Lightbox.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: Lightbox, factory: Lightbox.ɵfac, providedIn: 'root' });
+    /*@__PURE__*/ (function () {
+        i0__namespace.ɵsetClassMetadata(Lightbox, [{
+                type: i0.Injectable,
+                args: [{
+                        providedIn: 'root'
+                    }]
+            }], function () {
+            return [{ type: i0__namespace.ComponentFactoryResolver }, { type: i0__namespace.Injector }, { type: i0__namespace.ApplicationRef }, { type: LightboxConfig }, { type: LightboxEvent }, { type: undefined, decorators: [{
+                            type: i0.Inject,
+                            args: [i3.DOCUMENT]
+                        }] }];
+        }, null);
+    })();
 
     var LightboxModule = /** @class */ (function () {
         function LightboxModule() {
         }
-        LightboxModule.ɵmod = core.ɵɵdefineNgModule({ type: LightboxModule });
-        LightboxModule.ɵinj = core.ɵɵdefineInjector({ factory: function LightboxModule_Factory(t) { return new (t || LightboxModule)(); }, providers: [
-                Lightbox,
-                LightboxConfig,
-                LightboxEvent,
-                LightboxWindowRef
-            ], imports: [[common.CommonModule]] });
         return LightboxModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && core.ɵɵsetNgModuleScope(LightboxModule, { declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe], imports: [common.CommonModule] }); })();
-    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(LightboxModule, [{
-            type: core.NgModule,
-            args: [{
-                    imports: [common.CommonModule],
-                    declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe],
-                    providers: [
-                        Lightbox,
-                        LightboxConfig,
-                        LightboxEvent,
-                        LightboxWindowRef
-                    ],
-                    entryComponents: [LightboxOverlayComponent, LightboxComponent]
-                }]
-        }], null, null); })();
+    LightboxModule.ɵmod = i0__namespace.ɵɵdefineNgModule({ type: LightboxModule });
+    LightboxModule.ɵinj = i0__namespace.ɵɵdefineInjector({ factory: function LightboxModule_Factory(t) { return new (t || LightboxModule)(); }, providers: [
+            Lightbox,
+            LightboxConfig,
+            LightboxEvent,
+            LightboxWindowRef
+        ], imports: [[i3.CommonModule]] });
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(LightboxModule, { declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe], imports: [i3.CommonModule] }); })();
+    /*@__PURE__*/ (function () {
+        i0__namespace.ɵsetClassMetadata(LightboxModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [i3.CommonModule],
+                        declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe],
+                        providers: [
+                            Lightbox,
+                            LightboxConfig,
+                            LightboxEvent,
+                            LightboxWindowRef
+                        ],
+                        entryComponents: [LightboxOverlayComponent, LightboxComponent]
+                    }]
+            }], null, null);
+    })();
+
+    /**
+     * Generated bundle index. Do not edit.
+     */
 
     exports.LIGHTBOX_EVENT = LIGHTBOX_EVENT;
     exports.Lightbox = Lightbox;
@@ -1023,5 +1089,5 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
 //# sourceMappingURL=ngx-lightbox.umd.js.map
