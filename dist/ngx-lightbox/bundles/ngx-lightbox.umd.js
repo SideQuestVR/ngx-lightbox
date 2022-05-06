@@ -48,8 +48,8 @@
     }());
     LightboxEvent.ɵfac = function LightboxEvent_Factory(t) { return new (t || LightboxEvent)(); };
     LightboxEvent.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: LightboxEvent, factory: LightboxEvent.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(LightboxEvent, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(LightboxEvent, [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
@@ -73,8 +73,8 @@
     }());
     LightboxWindowRef.ɵfac = function LightboxWindowRef_Factory(t) { return new (t || LightboxWindowRef)(); };
     LightboxWindowRef.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: LightboxWindowRef, factory: LightboxWindowRef.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(LightboxWindowRef, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(LightboxWindowRef, [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
@@ -123,8 +123,8 @@
     }());
     SafePipe.ɵfac = function SafePipe_Factory(t) { return new (t || SafePipe)(i0__namespace.ɵɵdirectiveInject(i1__namespace.DomSanitizer)); };
     SafePipe.ɵpipe = i0__namespace.ɵɵdefinePipe({ name: "safe", type: SafePipe, pure: true });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(SafePipe, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SafePipe, [{
                 type: i0.Pipe,
                 args: [{ name: 'safe' }]
             }], function () { return [{ type: i1__namespace.DomSanitizer }]; }, null);
@@ -676,19 +676,19 @@
     LightboxComponent.ɵfac = function LightboxComponent_Factory(t) { return new (t || LightboxComponent)(i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef), i0__namespace.ɵɵdirectiveInject(i0__namespace.Renderer2), i0__namespace.ɵɵdirectiveInject(LightboxEvent), i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef), i0__namespace.ɵɵdirectiveInject(LightboxWindowRef), i0__namespace.ɵɵdirectiveInject(i1__namespace.DomSanitizer), i0__namespace.ɵɵdirectiveInject(i3.DOCUMENT)); };
     LightboxComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: LightboxComponent, selectors: [["", "lb-content", ""]], viewQuery: function LightboxComponent_Query(rf, ctx) {
             if (rf & 1) {
-                i0__namespace.ɵɵviewQuery(_c0$1, true);
-                i0__namespace.ɵɵviewQuery(_c1, true);
-                i0__namespace.ɵɵviewQuery(_c2, true);
-                i0__namespace.ɵɵviewQuery(_c3, true);
-                i0__namespace.ɵɵviewQuery(_c4, true);
-                i0__namespace.ɵɵviewQuery(_c5, true);
-                i0__namespace.ɵɵviewQuery(_c6, true);
-                i0__namespace.ɵɵviewQuery(_c7, true);
-                i0__namespace.ɵɵviewQuery(_c8, true);
-                i0__namespace.ɵɵviewQuery(_c9, true);
+                i0__namespace.ɵɵviewQuery(_c0$1, 1);
+                i0__namespace.ɵɵviewQuery(_c1, 1);
+                i0__namespace.ɵɵviewQuery(_c2, 1);
+                i0__namespace.ɵɵviewQuery(_c3, 1);
+                i0__namespace.ɵɵviewQuery(_c4, 1);
+                i0__namespace.ɵɵviewQuery(_c5, 1);
+                i0__namespace.ɵɵviewQuery(_c6, 1);
+                i0__namespace.ɵɵviewQuery(_c7, 1);
+                i0__namespace.ɵɵviewQuery(_c8, 1);
+                i0__namespace.ɵɵviewQuery(_c9, 1);
             }
             if (rf & 2) {
-                var _t;
+                var _t = void 0;
                 i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._outerContainerElem = _t.first);
                 i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._containerElem = _t.first);
                 i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx._leftArrowElem = _t.first);
@@ -788,8 +788,8 @@
                 i0__namespace.ɵɵproperty("hidden", !ctx.ui.showZoomButton);
             }
         }, directives: [i3__namespace.NgIf], pipes: [SafePipe], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(LightboxComponent, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(LightboxComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: '[lb-content]',
@@ -915,8 +915,8 @@
                 i0__namespace.ɵɵclassMap(ctx.classList);
             }
         }, inputs: { options: "options", cmpRef: "cmpRef" }, attrs: _c0, decls: 0, vars: 0, template: function LightboxOverlayComponent_Template(rf, ctx) { }, encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(LightboxOverlayComponent, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(LightboxOverlayComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: '[lb-overlay]',
@@ -965,8 +965,8 @@
     }());
     LightboxConfig.ɵfac = function LightboxConfig_Factory(t) { return new (t || LightboxConfig)(); };
     LightboxConfig.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: LightboxConfig, factory: LightboxConfig.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(LightboxConfig, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(LightboxConfig, [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
@@ -1032,8 +1032,8 @@
     }());
     Lightbox.ɵfac = function Lightbox_Factory(t) { return new (t || Lightbox)(i0__namespace.ɵɵinject(i0__namespace.ComponentFactoryResolver), i0__namespace.ɵɵinject(i0__namespace.Injector), i0__namespace.ɵɵinject(i0__namespace.ApplicationRef), i0__namespace.ɵɵinject(LightboxConfig), i0__namespace.ɵɵinject(LightboxEvent), i0__namespace.ɵɵinject(i3.DOCUMENT)); };
     Lightbox.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: Lightbox, factory: Lightbox.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(Lightbox, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(Lightbox, [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
@@ -1051,16 +1051,17 @@
         }
         return LightboxModule;
     }());
+    LightboxModule.ɵfac = function LightboxModule_Factory(t) { return new (t || LightboxModule)(); };
     LightboxModule.ɵmod = i0__namespace.ɵɵdefineNgModule({ type: LightboxModule });
-    LightboxModule.ɵinj = i0__namespace.ɵɵdefineInjector({ factory: function LightboxModule_Factory(t) { return new (t || LightboxModule)(); }, providers: [
+    LightboxModule.ɵinj = i0__namespace.ɵɵdefineInjector({ providers: [
             Lightbox,
             LightboxConfig,
             LightboxEvent,
             LightboxWindowRef
         ], imports: [[i3.CommonModule]] });
     (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(LightboxModule, { declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe], imports: [i3.CommonModule] }); })();
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(LightboxModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(LightboxModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [i3.CommonModule],
