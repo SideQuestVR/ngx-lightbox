@@ -25,11 +25,11 @@ export declare class LightboxEvent {
     lightboxEvent$: Observable<Object>;
     constructor();
     broadcastLightboxEvent(event: any): void;
-    static ɵfac: i0.ɵɵFactoryDef<LightboxEvent, never>;
-    static ɵprov: i0.ɵɵInjectableDef<LightboxEvent>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<LightboxEvent, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<LightboxEvent>;
 }
 export declare class LightboxWindowRef {
     get nativeWindow(): any;
-    static ɵfac: i0.ɵɵFactoryDef<LightboxWindowRef, never>;
-    static ɵprov: i0.ɵɵInjectableDef<LightboxWindowRef>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<LightboxWindowRef, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<LightboxWindowRef>;
 }

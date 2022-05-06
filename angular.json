@@ -68,7 +68,6 @@
             "main": "projects/ngx-lightbox-demo/src/main.ts",
             "polyfills": "projects/ngx-lightbox-demo/src/polyfills.ts",
             "tsConfig": "projects/ngx-lightbox-demo/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/ngx-lightbox-demo/src/favicon.ico",
               "projects/ngx-lightbox-demo/src/assets"
@@ -76,11 +75,16 @@
             "styles": [
               "projects/ngx-lightbox/lightbox.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
-              "aot": true,
               "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
@@ -101,7 +105,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",

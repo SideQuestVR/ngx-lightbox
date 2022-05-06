@@ -1,19 +1,19 @@
 [![Build Status](https://travis-ci.org/themyth92/ngx-lightbox.svg?branch=master)](https://travis-ci.org/themyth92/ngx-lightbox)
 
-# Ngx-Lightbox for Angular v11
+# Ngx-Lightbox for Angular v12
 
 A [lightbox2](https://github.com/lokesh/lightbox2) implementation port to use with new Angular without the need for jQuery
 
 ## Installation
 
 ```
-yarn add 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v11'
+yarn add 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v12'
 ```
 
 or
 
 ```
-npm install 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v11'
+npm install 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v12'
 ```
 
 Update your `angular.json`

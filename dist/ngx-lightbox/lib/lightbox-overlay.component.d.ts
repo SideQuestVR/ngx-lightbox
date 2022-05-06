@@ -20,6 +20,6 @@ export declare class LightboxOverlayComponent implements AfterViewInit, OnDestro
     private _end;
     private _getOverlayWidth;
     private _getOverlayHeight;
-    static ɵfac: i0.ɵɵFactoryDef<LightboxOverlayComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<LightboxOverlayComponent, "[lb-overlay]", never, { "options": "options"; "cmpRef": "cmpRef"; }, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<LightboxOverlayComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<LightboxOverlayComponent, "[lb-overlay]", never, { "options": "options"; "cmpRef": "cmpRef"; }, {}, never, never>;
 }

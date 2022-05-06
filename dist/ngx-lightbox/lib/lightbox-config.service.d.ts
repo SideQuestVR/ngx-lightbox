@@ -16,6 +16,6 @@ export declare class LightboxConfig {
     showRotate: boolean;
     containerElementResolver: (document: any) => HTMLElement;
     constructor();
-    static ɵfac: i0.ɵɵFactoryDef<LightboxConfig, never>;
-    static ɵprov: i0.ɵɵInjectableDef<LightboxConfig>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<LightboxConfig, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<LightboxConfig>;
 }

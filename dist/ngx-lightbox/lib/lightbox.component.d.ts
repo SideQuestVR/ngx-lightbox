@@ -6,8 +6,8 @@ export declare class SafePipe implements PipeTransform {
     private sanitizer;
     constructor(sanitizer: DomSanitizer);
     transform(url: any): import("@angular/platform-browser").SafeResourceUrl;
-    static ɵfac: i0.ɵɵFactoryDef<SafePipe, never>;
-    static ɵpipe: i0.ɵɵPipeDefWithMeta<SafePipe, "safe">;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SafePipe, never>;
+    static ɵpipe: i0.ɵɵPipeDeclaration<SafePipe, "safe">;
 }
 export declare class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnInit {
     private _elemRef;
@@ -79,6 +79,6 @@ export declare class LightboxComponent implements OnInit, AfterViewInit, OnDestr
     private _getCssStyleValue;
     private _onReceivedEvent;
     needsIframe(src: string): boolean;
-    static ɵfac: i0.ɵɵFactoryDef<LightboxComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<LightboxComponent, "[lb-content]", never, { "album": "album"; "currentImageIndex": "currentImageIndex"; "options": "options"; "cmpRef": "cmpRef"; }, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<LightboxComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<LightboxComponent, "[lb-content]", never, { "album": "album"; "currentImageIndex": "currentImageIndex"; "options": "options"; "cmpRef": "cmpRef"; }, {}, never, never>;
 }

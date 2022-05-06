@@ -13,6 +13,6 @@ export declare class Lightbox {
     open(album: Array<IAlbum>, curIndex?: number, options?: {}): void;
     close(): void;
     _createComponent(ComponentClass: any): ComponentRef<any>;
-    static ɵfac: i0.ɵɵFactoryDef<Lightbox, never>;
-    static ɵprov: i0.ɵɵInjectableDef<Lightbox>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<Lightbox, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<Lightbox>;
 }
