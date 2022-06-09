@@ -1,5 +1,5 @@
 {
-  "description": "A port >= angular 12 for lightbox2",
+  "description": "A port >= angular 13 for lightbox2",
   "dependencies": {
     "tslib": "^2.0.0"
   },
