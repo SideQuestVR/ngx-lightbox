@@ -34,9 +34,10 @@ describe('[ Unit - LightboxComponent ]', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ LightboxComponent ],
-      providers: [ LightboxEvent, LightboxWindowRef ]
-    });
+    declarations: [LightboxComponent],
+    providers: [LightboxEvent, LightboxWindowRef],
+    teardown: { destroyAfterEach: false }
+});
     createComponent();
   });
 

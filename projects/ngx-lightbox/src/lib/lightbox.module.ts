@@ -7,14 +7,13 @@ import { NgModule } from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 @NgModule({
-  imports: [ CommonModule ],
-  declarations: [ LightboxOverlayComponent, LightboxComponent, SafePipe ],
-  providers: [
-    Lightbox,
-    LightboxConfig,
-    LightboxEvent,
-    LightboxWindowRef
-  ],
-  entryComponents: [ LightboxOverlayComponent, LightboxComponent ]
+    imports: [CommonModule],
+    declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe],
+    providers: [
+        Lightbox,
+        LightboxConfig,
+        LightboxEvent,
+        LightboxWindowRef
+    ]
 })
 export class LightboxModule { }

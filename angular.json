@@ -33,18 +33,6 @@
             "tsConfig": "projects/ngx-lightbox/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-lightbox/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-lightbox/tsconfig.lib.json",
-              "projects/ngx-lightbox/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -140,19 +128,6 @@
               "projects/ngx-lightbox-demo/src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-lightbox-demo/tsconfig.app.json",
-              "projects/ngx-lightbox-demo/tsconfig.spec.json",
-              "projects/ngx-lightbox-demo/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {

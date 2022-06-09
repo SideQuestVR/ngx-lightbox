@@ -13,12 +13,25 @@
     "url": "git+https://github.com/viscoci/ngx-lightbox.git",
     "directory": "dist/ngx-lightbox"
   },
-  "main": "bundles/ngx-lightbox.umd.js",
-  "module": "fesm2015/ngx-lightbox.js",
-  "es2015": "fesm2015/ngx-lightbox.js",
-  "esm2015": "esm2015/ngx-lightbox.js",
-  "fesm2015": "fesm2015/ngx-lightbox.js",
+  "module": "fesm2015/ngx-lightbox.mjs",
+  "es2020": "fesm2020/ngx-lightbox.mjs",
+  "esm2020": "esm2020/ngx-lightbox.mjs",
+  "fesm2020": "fesm2020/ngx-lightbox.mjs",
+  "fesm2015": "fesm2015/ngx-lightbox.mjs",
   "typings": "ngx-lightbox.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./ngx-lightbox.d.ts",
+      "esm2020": "./esm2020/ngx-lightbox.mjs",
+      "es2020": "./fesm2020/ngx-lightbox.mjs",
+      "es2015": "./fesm2015/ngx-lightbox.mjs",
+      "node": "./fesm2015/ngx-lightbox.mjs",
+      "default": "./fesm2020/ngx-lightbox.mjs"
+    }
+  },
   "sideEffects": false,
   "scripts": {
     "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
