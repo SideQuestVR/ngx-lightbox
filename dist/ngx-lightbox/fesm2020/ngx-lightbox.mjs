@@ -24,14 +24,14 @@ class LightboxEvent {
         this._lightboxEventSource.next(event);
     }
 }
-LightboxEvent.ɵfac = function LightboxEvent_Factory(t) { return new (t || LightboxEvent)(); };
-LightboxEvent.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: LightboxEvent, factory: LightboxEvent.ɵfac, providedIn: 'root' });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LightboxEvent, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return []; }, null); })();
+LightboxEvent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxEvent, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
+LightboxEvent.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxEvent, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxEvent, decorators: [{
+            type: Injectable,
+            args: [{
+                    providedIn: 'root'
+                }]
+        }], ctorParameters: function () { return []; } });
 function getWindow() {
     return window;
 }
@@ -40,39 +40,15 @@ class LightboxWindowRef {
         return getWindow();
     }
 }
-LightboxWindowRef.ɵfac = function LightboxWindowRef_Factory(t) { return new (t || LightboxWindowRef)(); };
-LightboxWindowRef.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: LightboxWindowRef, factory: LightboxWindowRef.ɵfac, providedIn: 'root' });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LightboxWindowRef, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], null, null); })();
+LightboxWindowRef.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxWindowRef, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
+LightboxWindowRef.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxWindowRef, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxWindowRef, decorators: [{
+            type: Injectable,
+            args: [{
+                    providedIn: 'root'
+                }]
+        }] });
 
-const _c0$1 = ["outerContainer"];
-const _c1 = ["container"];
-const _c2 = ["leftArrow"];
-const _c3 = ["rightArrow"];
-const _c4 = ["navArrow"];
-const _c5 = ["dataContainer"];
-const _c6 = ["image"];
-const _c7 = ["iframe"];
-const _c8 = ["caption"];
-const _c9 = ["number"];
-const _c10 = ["lb-content", ""];
-function LightboxComponent_img_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "img", 31, 32);
-} if (rf & 2) {
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("src", ctx_r2.album[ctx_r2.currentImageIndex].src, i0.ɵɵsanitizeUrl)("hidden", ctx_r2.ui.showReloader);
-} }
-function LightboxComponent_iframe_5_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "iframe", 33, 34);
-    i0.ɵɵpipe(2, "safe");
-} if (rf & 2) {
-    const ctx_r3 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("src", i0.ɵɵpipeBind1(2, 2, ctx_r3.album[ctx_r3.currentImageIndex].src), i0.ɵɵsanitizeResourceUrl)("hidden", ctx_r3.ui.showReloader);
-} }
 class SafePipe {
     constructor(sanitizer) {
         this.sanitizer = sanitizer;
@@ -81,12 +57,12 @@ class SafePipe {
         return this.sanitizer.bypassSecurityTrustResourceUrl(url);
     }
 }
-SafePipe.ɵfac = function SafePipe_Factory(t) { return new (t || SafePipe)(i0.ɵɵdirectiveInject(i1.DomSanitizer, 16)); };
-SafePipe.ɵpipe = /*@__PURE__*/ i0.ɵɵdefinePipe({ name: "safe", type: SafePipe, pure: true });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SafePipe, [{
-        type: Pipe,
-        args: [{ name: 'safe' }]
-    }], function () { return [{ type: i1.DomSanitizer }]; }, null); })();
+SafePipe.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: SafePipe, deps: [{ token: i1.DomSanitizer }], target: i0.ɵɵFactoryTarget.Pipe });
+SafePipe.ɵpipe = i0.ɵɵngDeclarePipe({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: SafePipe, name: "safe" });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: SafePipe, decorators: [{
+            type: Pipe,
+            args: [{ name: 'safe' }]
+        }], ctorParameters: function () { return [{ type: i1.DomSanitizer }]; } });
 class LightboxComponent {
     constructor(_elemRef, _rendererRef, _lightboxEvent, _lightboxElem, _lightboxWindowRef, _sanitizer, _documentRef) {
         this._elemRef = _elemRef;
@@ -623,146 +599,59 @@ class LightboxComponent {
         return false;
     }
 }
-LightboxComponent.ɵfac = function LightboxComponent_Factory(t) { return new (t || LightboxComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(LightboxEvent), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(LightboxWindowRef), i0.ɵɵdirectiveInject(i1.DomSanitizer), i0.ɵɵdirectiveInject(DOCUMENT)); };
-LightboxComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: LightboxComponent, selectors: [["", "lb-content", ""]], viewQuery: function LightboxComponent_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(_c0$1, 5);
-        i0.ɵɵviewQuery(_c1, 5);
-        i0.ɵɵviewQuery(_c2, 5);
-        i0.ɵɵviewQuery(_c3, 5);
-        i0.ɵɵviewQuery(_c4, 5);
-        i0.ɵɵviewQuery(_c5, 5);
-        i0.ɵɵviewQuery(_c6, 5);
-        i0.ɵɵviewQuery(_c7, 5);
-        i0.ɵɵviewQuery(_c8, 5);
-        i0.ɵɵviewQuery(_c9, 5);
-    } if (rf & 2) {
-        let _t;
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._outerContainerElem = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._containerElem = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._leftArrowElem = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._rightArrowElem = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._navArrowElem = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._dataContainerElem = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._imageElem = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._iframeElem = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._captionElem = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._numberElem = _t.first);
-    } }, hostVars: 2, hostBindings: function LightboxComponent_HostBindings(rf, ctx) { if (rf & 1) {
-        i0.ɵɵlistener("close", function LightboxComponent_close_HostBindingHandler($event) { return ctx.close($event); });
-    } if (rf & 2) {
-        i0.ɵɵclassMap(ctx.ui.classList);
-    } }, inputs: { album: "album", currentImageIndex: "currentImageIndex", options: "options", cmpRef: "cmpRef" }, attrs: _c10, decls: 32, vars: 13, consts: [["id", "outerContainer", 1, "lb-outerContainer", "transition"], ["outerContainer", ""], ["id", "container", 1, "lb-container"], ["container", ""], ["class", "lb-image", "id", "image", "class", "lb-image animation fadeIn", 3, "src", "hidden", 4, "ngIf"], ["class", "lb-image", "id", "iframe", "class", "lb-image lb-iframe animation fadeIn", 3, "src", "hidden", 4, "ngIf"], [1, "lb-nav", 3, "hidden"], ["navArrow", ""], [1, "lb-prev", 3, "hidden", "click"], ["leftArrow", ""], [1, "lb-next", 3, "hidden", "click"], ["rightArrow", ""], [1, "lb-loader", 3, "hidden", "click"], [1, "lb-cancel"], [1, "lb-dataContainer", 3, "hidden"], ["dataContainer", ""], [1, "lb-data"], [1, "lb-details"], [1, "lb-caption", "animation", "fadeIn", 3, "hidden", "innerHtml"], ["caption", ""], [1, "lb-number", "animation", "fadeIn", 3, "hidden"], ["number", ""], [1, "lb-controlContainer"], [1, "lb-closeContainer"], [1, "lb-close", 3, "click"], [1, "lb-turnContainer", 3, "hidden"], [1, "lb-turnLeft", 3, "click"], [1, "lb-turnRight", 3, "click"], [1, "lb-zoomContainer", 3, "hidden"], [1, "lb-zoomOut", 3, "click"], [1, "lb-zoomIn", 3, "click"], ["id", "image", 1, "lb-image", "animation", "fadeIn", 3, "src", "hidden"], ["image", ""], ["id", "iframe", 1, "lb-image", "lb-iframe", "animation", "fadeIn", 3, "src", "hidden"], ["iframe", ""]], template: function LightboxComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 0, 1)(2, "div", 2, 3);
-        i0.ɵɵtemplate(4, LightboxComponent_img_4_Template, 2, 2, "img", 4);
-        i0.ɵɵtemplate(5, LightboxComponent_iframe_5_Template, 3, 4, "iframe", 5);
-        i0.ɵɵelementStart(6, "div", 6, 7)(8, "a", 8, 9);
-        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_8_listener() { return ctx.prevImage(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(10, "a", 10, 11);
-        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_10_listener() { return ctx.nextImage(); });
-        i0.ɵɵelementEnd()();
-        i0.ɵɵelementStart(12, "div", 12);
-        i0.ɵɵlistener("click", function LightboxComponent_Template_div_click_12_listener($event) { return ctx.close($event); });
-        i0.ɵɵelement(13, "a", 13);
-        i0.ɵɵelementEnd()()();
-        i0.ɵɵelementStart(14, "div", 14, 15)(16, "div", 16)(17, "div", 17);
-        i0.ɵɵelement(18, "span", 18, 19);
-        i0.ɵɵelementStart(20, "span", 20, 21);
-        i0.ɵɵtext(22);
-        i0.ɵɵelementEnd()();
-        i0.ɵɵelementStart(23, "div", 22)(24, "div", 23)(25, "a", 24);
-        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_25_listener($event) { return ctx.close($event); });
-        i0.ɵɵelementEnd()();
-        i0.ɵɵelementStart(26, "div", 25)(27, "a", 26);
-        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_27_listener($event) { return ctx.control($event); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(28, "a", 27);
-        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_28_listener($event) { return ctx.control($event); });
-        i0.ɵɵelementEnd()();
-        i0.ɵɵelementStart(29, "div", 28)(30, "a", 29);
-        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_30_listener($event) { return ctx.control($event); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(31, "a", 30);
-        i0.ɵɵlistener("click", function LightboxComponent_Template_a_click_31_listener($event) { return ctx.control($event); });
-        i0.ɵɵelementEnd()()()()();
-    } if (rf & 2) {
-        i0.ɵɵadvance(4);
-        i0.ɵɵproperty("ngIf", !ctx.album[ctx.currentImageIndex].iframe && !ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx.album[ctx.currentImageIndex].iframe || ctx.needsIframe(ctx.album[ctx.currentImageIndex].src));
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("hidden", !ctx.ui.showArrowNav);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("hidden", !ctx.ui.showLeftArrow);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("hidden", !ctx.ui.showRightArrow);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("hidden", !ctx.ui.showReloader);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("hidden", ctx.ui.showReloader);
-        i0.ɵɵadvance(4);
-        i0.ɵɵproperty("hidden", !ctx.ui.showCaption)("innerHtml", ctx.album[ctx.currentImageIndex].caption, i0.ɵɵsanitizeHtml);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("hidden", !ctx.ui.showPageNumber);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(ctx.content.pageNumber);
-        i0.ɵɵadvance(4);
-        i0.ɵɵproperty("hidden", !ctx.ui.showRotateButton);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("hidden", !ctx.ui.showZoomButton);
-    } }, directives: [i3.NgIf], pipes: [SafePipe], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LightboxComponent, [{
-        type: Component,
-        args: [{ selector: '[lb-content]', host: {
-                    '[class]': 'ui.classList'
-                }, template: "<div class=\"lb-outerContainer transition\" #outerContainer id=\"outerContainer\">\r\n    <div class=\"lb-container\" #container id=\"container\">\r\n        <img class=\"lb-image\" id=\"image\" [src]=\"album[currentImageIndex].src\" class=\"lb-image animation fadeIn\"\r\n            [hidden]=\"ui.showReloader\" #image\r\n            *ngIf=\"!album[currentImageIndex].iframe && !needsIframe(album[currentImageIndex].src)\">\r\n        <iframe class=\"lb-image\" id=\"iframe\" [src]=\"album[currentImageIndex].src | safe\"\r\n            class=\"lb-image lb-iframe animation fadeIn\" [hidden]=\"ui.showReloader\" #iframe\r\n            *ngIf=\"album[currentImageIndex].iframe || needsIframe(album[currentImageIndex].src)\">\r\n        </iframe>\r\n        <div class=\"lb-nav\" [hidden]=\"!ui.showArrowNav\" #navArrow>\r\n            <a class=\"lb-prev\" [hidden]=\"!ui.showLeftArrow\" (click)=\"prevImage()\" #leftArrow></a>\r\n            <a class=\"lb-next\" [hidden]=\"!ui.showRightArrow\" (click)=\"nextImage()\" #rightArrow></a>\r\n        </div>\r\n        <div class=\"lb-loader\" [hidden]=\"!ui.showReloader\" (click)=\"close($event)\">\r\n            <a class=\"lb-cancel\"></a>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"lb-dataContainer\" [hidden]=\"ui.showReloader\" #dataContainer>\r\n    <div class=\"lb-data\">\r\n        <div class=\"lb-details\">\r\n            <span class=\"lb-caption animation fadeIn\" [hidden]=\"!ui.showCaption\"\r\n                [innerHtml]=\"album[currentImageIndex].caption\" #caption>\r\n            </span>\r\n            <span class=\"lb-number animation fadeIn\" [hidden]=\"!ui.showPageNumber\" #number>{{ content.pageNumber\r\n                }}</span>\r\n        </div>\r\n        <div class=\"lb-controlContainer\">\r\n            <div class=\"lb-closeContainer\">\r\n                <a class=\"lb-close\" (click)=\"close($event)\"></a>\r\n            </div>\r\n            <div class=\"lb-turnContainer\" [hidden]=\"!ui.showRotateButton\">\r\n                <a class=\"lb-turnLeft\" (click)=\"control($event)\"></a>\r\n                <a class=\"lb-turnRight\" (click)=\"control($event)\"></a>\r\n            </div>\r\n            <div class=\"lb-zoomContainer\" [hidden]=\"!ui.showZoomButton\">\r\n                <a class=\"lb-zoomOut\" (click)=\"control($event)\"></a>\r\n                <a class=\"lb-zoomIn\" (click)=\"control($event)\"></a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>" }]
-    }], function () { return [{ type: i0.ElementRef }, { type: i0.Renderer2 }, { type: LightboxEvent }, { type: i0.ElementRef }, { type: LightboxWindowRef }, { type: i1.DomSanitizer }, { type: undefined, decorators: [{
-                type: Inject,
-                args: [DOCUMENT]
-            }] }]; }, { album: [{
-            type: Input
-        }], currentImageIndex: [{
-            type: Input
-        }], options: [{
-            type: Input
-        }], cmpRef: [{
-            type: Input
-        }], _outerContainerElem: [{
-            type: ViewChild,
-            args: ['outerContainer']
-        }], _containerElem: [{
-            type: ViewChild,
-            args: ['container']
-        }], _leftArrowElem: [{
-            type: ViewChild,
-            args: ['leftArrow']
-        }], _rightArrowElem: [{
-            type: ViewChild,
-            args: ['rightArrow']
-        }], _navArrowElem: [{
-            type: ViewChild,
-            args: ['navArrow']
-        }], _dataContainerElem: [{
-            type: ViewChild,
-            args: ['dataContainer']
-        }], _imageElem: [{
-            type: ViewChild,
-            args: ['image']
-        }], _iframeElem: [{
-            type: ViewChild,
-            args: ['iframe']
-        }], _captionElem: [{
-            type: ViewChild,
-            args: ['caption']
-        }], _numberElem: [{
-            type: ViewChild,
-            args: ['number']
-        }], close: [{
-            type: HostListener,
-            args: ['close', ['$event']]
-        }] }); })();
+LightboxComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxComponent, deps: [{ token: i0.ElementRef }, { token: i0.Renderer2 }, { token: LightboxEvent }, { token: i0.ElementRef }, { token: LightboxWindowRef }, { token: i1.DomSanitizer }, { token: DOCUMENT }], target: i0.ɵɵFactoryTarget.Component });
+LightboxComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.3.11", type: LightboxComponent, selector: "[lb-content]", inputs: { album: "album", currentImageIndex: "currentImageIndex", options: "options", cmpRef: "cmpRef" }, host: { listeners: { "close": "close($event)" }, properties: { "class": "ui.classList" } }, viewQueries: [{ propertyName: "_outerContainerElem", first: true, predicate: ["outerContainer"], descendants: true }, { propertyName: "_containerElem", first: true, predicate: ["container"], descendants: true }, { propertyName: "_leftArrowElem", first: true, predicate: ["leftArrow"], descendants: true }, { propertyName: "_rightArrowElem", first: true, predicate: ["rightArrow"], descendants: true }, { propertyName: "_navArrowElem", first: true, predicate: ["navArrow"], descendants: true }, { propertyName: "_dataContainerElem", first: true, predicate: ["dataContainer"], descendants: true }, { propertyName: "_imageElem", first: true, predicate: ["image"], descendants: true }, { propertyName: "_iframeElem", first: true, predicate: ["iframe"], descendants: true }, { propertyName: "_captionElem", first: true, predicate: ["caption"], descendants: true }, { propertyName: "_numberElem", first: true, predicate: ["number"], descendants: true }], ngImport: i0, template: "<div class=\"lb-outerContainer transition\" #outerContainer id=\"outerContainer\">\r\n    <div class=\"lb-container\" #container id=\"container\">\r\n        <img class=\"lb-image\" id=\"image\" [src]=\"album[currentImageIndex].src\" class=\"lb-image animation fadeIn\"\r\n            [hidden]=\"ui.showReloader\" #image\r\n            *ngIf=\"!album[currentImageIndex].iframe && !needsIframe(album[currentImageIndex].src)\">\r\n        <iframe class=\"lb-image\" id=\"iframe\" [src]=\"album[currentImageIndex].src | safe\"\r\n            class=\"lb-image lb-iframe animation fadeIn\" [hidden]=\"ui.showReloader\" #iframe\r\n            *ngIf=\"album[currentImageIndex].iframe || needsIframe(album[currentImageIndex].src)\">\r\n        </iframe>\r\n        <div class=\"lb-nav\" [hidden]=\"!ui.showArrowNav\" #navArrow>\r\n            <a class=\"lb-prev\" [hidden]=\"!ui.showLeftArrow\" (click)=\"prevImage()\" #leftArrow></a>\r\n            <a class=\"lb-next\" [hidden]=\"!ui.showRightArrow\" (click)=\"nextImage()\" #rightArrow></a>\r\n        </div>\r\n        <div class=\"lb-loader\" [hidden]=\"!ui.showReloader\" (click)=\"close($event)\">\r\n            <a class=\"lb-cancel\"></a>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"lb-dataContainer\" [hidden]=\"ui.showReloader\" #dataContainer>\r\n    <div class=\"lb-data\">\r\n        <div class=\"lb-details\">\r\n            <span class=\"lb-caption animation fadeIn\" [hidden]=\"!ui.showCaption\"\r\n                [innerHtml]=\"album[currentImageIndex].caption\" #caption>\r\n            </span>\r\n            <span class=\"lb-number animation fadeIn\" [hidden]=\"!ui.showPageNumber\" #number>{{ content.pageNumber\r\n                }}</span>\r\n        </div>\r\n        <div class=\"lb-controlContainer\">\r\n            <div class=\"lb-closeContainer\">\r\n                <a class=\"lb-close\" (click)=\"close($event)\"></a>\r\n            </div>\r\n            <div class=\"lb-turnContainer\" [hidden]=\"!ui.showRotateButton\">\r\n                <a class=\"lb-turnLeft\" (click)=\"control($event)\"></a>\r\n                <a class=\"lb-turnRight\" (click)=\"control($event)\"></a>\r\n            </div>\r\n            <div class=\"lb-zoomContainer\" [hidden]=\"!ui.showZoomButton\">\r\n                <a class=\"lb-zoomOut\" (click)=\"control($event)\"></a>\r\n                <a class=\"lb-zoomIn\" (click)=\"control($event)\"></a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>", directives: [{ type: i3.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }], pipes: { "safe": SafePipe } });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxComponent, decorators: [{
+            type: Component,
+            args: [{ selector: '[lb-content]', host: {
+                        '[class]': 'ui.classList'
+                    }, template: "<div class=\"lb-outerContainer transition\" #outerContainer id=\"outerContainer\">\r\n    <div class=\"lb-container\" #container id=\"container\">\r\n        <img class=\"lb-image\" id=\"image\" [src]=\"album[currentImageIndex].src\" class=\"lb-image animation fadeIn\"\r\n            [hidden]=\"ui.showReloader\" #image\r\n            *ngIf=\"!album[currentImageIndex].iframe && !needsIframe(album[currentImageIndex].src)\">\r\n        <iframe class=\"lb-image\" id=\"iframe\" [src]=\"album[currentImageIndex].src | safe\"\r\n            class=\"lb-image lb-iframe animation fadeIn\" [hidden]=\"ui.showReloader\" #iframe\r\n            *ngIf=\"album[currentImageIndex].iframe || needsIframe(album[currentImageIndex].src)\">\r\n        </iframe>\r\n        <div class=\"lb-nav\" [hidden]=\"!ui.showArrowNav\" #navArrow>\r\n            <a class=\"lb-prev\" [hidden]=\"!ui.showLeftArrow\" (click)=\"prevImage()\" #leftArrow></a>\r\n            <a class=\"lb-next\" [hidden]=\"!ui.showRightArrow\" (click)=\"nextImage()\" #rightArrow></a>\r\n        </div>\r\n        <div class=\"lb-loader\" [hidden]=\"!ui.showReloader\" (click)=\"close($event)\">\r\n            <a class=\"lb-cancel\"></a>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"lb-dataContainer\" [hidden]=\"ui.showReloader\" #dataContainer>\r\n    <div class=\"lb-data\">\r\n        <div class=\"lb-details\">\r\n            <span class=\"lb-caption animation fadeIn\" [hidden]=\"!ui.showCaption\"\r\n                [innerHtml]=\"album[currentImageIndex].caption\" #caption>\r\n            </span>\r\n            <span class=\"lb-number animation fadeIn\" [hidden]=\"!ui.showPageNumber\" #number>{{ content.pageNumber\r\n                }}</span>\r\n        </div>\r\n        <div class=\"lb-controlContainer\">\r\n            <div class=\"lb-closeContainer\">\r\n                <a class=\"lb-close\" (click)=\"close($event)\"></a>\r\n            </div>\r\n            <div class=\"lb-turnContainer\" [hidden]=\"!ui.showRotateButton\">\r\n                <a class=\"lb-turnLeft\" (click)=\"control($event)\"></a>\r\n                <a class=\"lb-turnRight\" (click)=\"control($event)\"></a>\r\n            </div>\r\n            <div class=\"lb-zoomContainer\" [hidden]=\"!ui.showZoomButton\">\r\n                <a class=\"lb-zoomOut\" (click)=\"control($event)\"></a>\r\n                <a class=\"lb-zoomIn\" (click)=\"control($event)\"></a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>" }]
+        }], ctorParameters: function () { return [{ type: i0.ElementRef }, { type: i0.Renderer2 }, { type: LightboxEvent }, { type: i0.ElementRef }, { type: LightboxWindowRef }, { type: i1.DomSanitizer }, { type: undefined, decorators: [{
+                    type: Inject,
+                    args: [DOCUMENT]
+                }] }]; }, propDecorators: { album: [{
+                type: Input
+            }], currentImageIndex: [{
+                type: Input
+            }], options: [{
+                type: Input
+            }], cmpRef: [{
+                type: Input
+            }], _outerContainerElem: [{
+                type: ViewChild,
+                args: ['outerContainer']
+            }], _containerElem: [{
+                type: ViewChild,
+                args: ['container']
+            }], _leftArrowElem: [{
+                type: ViewChild,
+                args: ['leftArrow']
+            }], _rightArrowElem: [{
+                type: ViewChild,
+                args: ['rightArrow']
+            }], _navArrowElem: [{
+                type: ViewChild,
+                args: ['navArrow']
+            }], _dataContainerElem: [{
+                type: ViewChild,
+                args: ['dataContainer']
+            }], _imageElem: [{
+                type: ViewChild,
+                args: ['image']
+            }], _iframeElem: [{
+                type: ViewChild,
+                args: ['iframe']
+            }], _captionElem: [{
+                type: ViewChild,
+                args: ['caption']
+            }], _numberElem: [{
+                type: ViewChild,
+                args: ['number']
+            }], close: [{
+                type: HostListener,
+                args: ['close', ['$event']]
+            }] } });
 
-const _c0 = ["lb-overlay", ""];
 class LightboxOverlayComponent {
     constructor(_elemRef, _rendererRef, _lightboxEvent, _documentRef) {
         this._elemRef = _elemRef;
@@ -818,35 +707,31 @@ class LightboxOverlayComponent {
         return Math.max(this._documentRef.body.scrollHeight, this._documentRef.body.offsetHeight, this._documentRef.documentElement.clientHeight, this._documentRef.documentElement.scrollHeight, this._documentRef.documentElement.offsetHeight);
     }
 }
-LightboxOverlayComponent.ɵfac = function LightboxOverlayComponent_Factory(t) { return new (t || LightboxOverlayComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(LightboxEvent), i0.ɵɵdirectiveInject(DOCUMENT)); };
-LightboxOverlayComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: LightboxOverlayComponent, selectors: [["", "lb-overlay", ""]], hostVars: 2, hostBindings: function LightboxOverlayComponent_HostBindings(rf, ctx) { if (rf & 1) {
-        i0.ɵɵlistener("click", function LightboxOverlayComponent_click_HostBindingHandler() { return ctx.close(); })("resize", function LightboxOverlayComponent_resize_HostBindingHandler() { return ctx.onResize(); }, false, i0.ɵɵresolveWindow);
-    } if (rf & 2) {
-        i0.ɵɵclassMap(ctx.classList);
-    } }, inputs: { options: "options", cmpRef: "cmpRef" }, attrs: _c0, decls: 0, vars: 0, template: function LightboxOverlayComponent_Template(rf, ctx) { }, encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LightboxOverlayComponent, [{
-        type: Component,
-        args: [{
-                selector: '[lb-overlay]',
-                template: '',
-                host: {
-                    '[class]': 'classList'
-                }
-            }]
-    }], function () { return [{ type: i0.ElementRef }, { type: i0.Renderer2 }, { type: LightboxEvent }, { type: undefined, decorators: [{
-                type: Inject,
-                args: [DOCUMENT]
-            }] }]; }, { options: [{
-            type: Input
-        }], cmpRef: [{
-            type: Input
-        }], close: [{
-            type: HostListener,
-            args: ['click']
-        }], onResize: [{
-            type: HostListener,
-            args: ['window:resize']
-        }] }); })();
+LightboxOverlayComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxOverlayComponent, deps: [{ token: i0.ElementRef }, { token: i0.Renderer2 }, { token: LightboxEvent }, { token: DOCUMENT }], target: i0.ɵɵFactoryTarget.Component });
+LightboxOverlayComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.3.11", type: LightboxOverlayComponent, selector: "[lb-overlay]", inputs: { options: "options", cmpRef: "cmpRef" }, host: { listeners: { "click": "close()", "window:resize": "onResize()" }, properties: { "class": "classList" } }, ngImport: i0, template: '', isInline: true });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxOverlayComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: '[lb-overlay]',
+                    template: '',
+                    host: {
+                        '[class]': 'classList'
+                    }
+                }]
+        }], ctorParameters: function () { return [{ type: i0.ElementRef }, { type: i0.Renderer2 }, { type: LightboxEvent }, { type: undefined, decorators: [{
+                    type: Inject,
+                    args: [DOCUMENT]
+                }] }]; }, propDecorators: { options: [{
+                type: Input
+            }], cmpRef: [{
+                type: Input
+            }], close: [{
+                type: HostListener,
+                args: ['click']
+            }], onResize: [{
+                type: HostListener,
+                args: ['window:resize']
+            }] } });
 
 class LightboxConfig {
     constructor() {
@@ -867,14 +752,14 @@ class LightboxConfig {
         this.containerElementResolver = (documentRef) => documentRef.querySelector('body');
     }
 }
-LightboxConfig.ɵfac = function LightboxConfig_Factory(t) { return new (t || LightboxConfig)(); };
-LightboxConfig.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: LightboxConfig, factory: LightboxConfig.ɵfac, providedIn: 'root' });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LightboxConfig, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return []; }, null); })();
+LightboxConfig.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxConfig, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
+LightboxConfig.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxConfig, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxConfig, decorators: [{
+            type: Injectable,
+            args: [{
+                    providedIn: 'root'
+                }]
+        }], ctorParameters: function () { return []; } });
 
 class Lightbox {
     constructor(_componentFactoryResolver, _injector, _applicationRef, _lightboxConfig, _lightboxEvent, _documentRef) {
@@ -928,42 +813,41 @@ class Lightbox {
         return component;
     }
 }
-Lightbox.ɵfac = function Lightbox_Factory(t) { return new (t || Lightbox)(i0.ɵɵinject(i0.ComponentFactoryResolver), i0.ɵɵinject(i0.Injector), i0.ɵɵinject(i0.ApplicationRef), i0.ɵɵinject(LightboxConfig), i0.ɵɵinject(LightboxEvent), i0.ɵɵinject(DOCUMENT)); };
-Lightbox.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: Lightbox, factory: Lightbox.ɵfac, providedIn: 'root' });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(Lightbox, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return [{ type: i0.ComponentFactoryResolver }, { type: i0.Injector }, { type: i0.ApplicationRef }, { type: LightboxConfig }, { type: LightboxEvent }, { type: undefined, decorators: [{
-                type: Inject,
-                args: [DOCUMENT]
-            }] }]; }, null); })();
+Lightbox.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: Lightbox, deps: [{ token: i0.ComponentFactoryResolver }, { token: i0.Injector }, { token: i0.ApplicationRef }, { token: LightboxConfig }, { token: LightboxEvent }, { token: DOCUMENT }], target: i0.ɵɵFactoryTarget.Injectable });
+Lightbox.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: Lightbox, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: Lightbox, decorators: [{
+            type: Injectable,
+            args: [{
+                    providedIn: 'root'
+                }]
+        }], ctorParameters: function () { return [{ type: i0.ComponentFactoryResolver }, { type: i0.Injector }, { type: i0.ApplicationRef }, { type: LightboxConfig }, { type: LightboxEvent }, { type: undefined, decorators: [{
+                    type: Inject,
+                    args: [DOCUMENT]
+                }] }]; } });
 
 class LightboxModule {
 }
-LightboxModule.ɵfac = function LightboxModule_Factory(t) { return new (t || LightboxModule)(); };
-LightboxModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: LightboxModule });
-LightboxModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
+LightboxModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+LightboxModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxModule, declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe], imports: [CommonModule] });
+LightboxModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxModule, providers: [
         Lightbox,
         LightboxConfig,
         LightboxEvent,
         LightboxWindowRef
     ], imports: [[CommonModule]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LightboxModule, [{
-        type: NgModule,
-        args: [{
-                imports: [CommonModule],
-                declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe],
-                providers: [
-                    Lightbox,
-                    LightboxConfig,
-                    LightboxEvent,
-                    LightboxWindowRef
-                ]
-            }]
-    }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(LightboxModule, { declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe], imports: [CommonModule] }); })();
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: LightboxModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    imports: [CommonModule],
+                    declarations: [LightboxOverlayComponent, LightboxComponent, SafePipe],
+                    providers: [
+                        Lightbox,
+                        LightboxConfig,
+                        LightboxEvent,
+                        LightboxWindowRef
+                    ]
+                }]
+        }] });
 
 /**
  * Generated bundle index. Do not edit.
