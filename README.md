@@ -7,13 +7,13 @@ A [lightbox2](https://github.com/lokesh/lightbox2) implementation port to use wi
 ## Installation
 
 ```
-yarn add 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v12'
+yarn add ngx-lightbox@git+ssh://git@github.com/SideQuestVR/ngx-lightbox-releases
 ```
 
 or
 
 ```
-npm install 'https://gitpkg.now.sh/viscoci/ngx-lightbox/dist/ngx-lightbox?v12'
+npm install ngx-lightbox@git+ssh://git@github.com/SideQuestVR/ngx-lightbox-releases
 ```
 
 Update your `angular.json`
@@ -218,3 +218,16 @@ BTC: 1MFx5waJ7Sitn961DaXe3mQXrb7pEoSJct
 ETH: 0x2211F3d683eB1C2d753aD21D9Bd9110729C80B72
 
 NEO: ARrUrnbq1ogfsoabvCgJ5SHgknhzyUmtuS
+
+
+### Releases
+These are half ass instructions on how to update the ngx-lightbox-release. mileage may vary
+1. yarn
+1. git clone https://github.com/SideQuestVR/ngx-lightbox-releases.git dist/ngx-lightbox
+1. yarn build
+1. cd dist/ngx-lightbox
+1. git add .
+1. git commit -m "<message>" 
+1. git push origin
+
+1. you'll have to update yarn lock in projects that use this as dependency by running `yarn upgrade ngx-lightbox@git+ssh://git@github.com/SideQuestVR/ngx-lightbox-releases`
